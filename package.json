@@ -1,0 +1,35 @@
+{
+  "name": "root_folder_index",
+  "version": "1.0.0",
+  "description": "web integration on root folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vunf1/root_folder_project.git"
+  },
+  "keywords": [
+    "root_folder"
+  ],
+  "author": "Joao Maia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vunf1/root_folder_project/issues"
+  },
+  "homepage": "https://github.com/vunf1/root_folder_project#readme",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-browserify": "^5.2.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1"
+  }
+}
