@@ -79,7 +79,7 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Autonomous Self - Studying Computer Concepts - lifetime passion</h3>
               <div class="subheading mb-3">Independent</div>
-              <p>While I am on the computer I put more knowledge about hardware/software/web/network development depends on the need of what I want to do, every day I learn something new, I do what I like and it makes me happy. I like to have knowledge of various areas for when I need such skills am prepared.</p>
+              <p>While I am on the computer I put more knowledge about hardware/software/web/network development depends on the need of what I want to do, every day I learn something new, I do what I like and it makes me happy. I have knowledge (medium) of various areas for when I need such skills am prepared.</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">June 2010 - Present</span>
@@ -427,7 +427,6 @@
 <script type="text/javascript">
         
 
-
 $(".triggerImage").click(function (event) {
   /*Certificados introdução dinamica das imagens usando um layout mais elegante new:alertify old:modal(bootstrap)*/
         var name=event.target.id;
@@ -439,11 +438,14 @@ $(".triggerImage").click(function (event) {
             img2="<img style='width: 100%;height: auto%; bottom:0;' src='img/certificates/"+name+"2.png'>";
             alertify.alert(img, function(){
                  alertify.alert(img2, function(){ alertify.success('Checked'); })
-                  }).set({'pinnable': true, 'modal':false, 'frameless': true});
+                  }).set({'pinnable': true, 'modal':true, 'frameless': true, select: true});
             
   }
   img="<img style='width: 100%;height: auto;' src='img/certificates/"+name+".png'>";
   
-  return alertify.alert(img, function(){ alertify.success('Checked'); }).set({'pinnable': true, 'modal':false, 'frameless': true});
+  return alertify.alert(img, function(){ alertify.success('Checked');
+   }).set({'pinnable': true, 'modal':true, 'frameless': true});
 });
+
+$('[data-toggle="tooltip"]').tooltip();/*ativa tooltip cross-platform nos elementos que teem data-toggle="tooltip" + title */
 </script>

@@ -79,7 +79,7 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Estudante Autônomo de conceptos de computação - Paixão da vida</h3>
               <div class="subheading mb-3">Independente</div>
-              <p>Enquanto estou a frente do computador adquiro vários tipos de conhecimento sobre o desenvolvimento de hardware/software/web/network tudo depende da necessidade de aprender no momento, todos os dias aprendo sempre algo novo e isso fascina-me, faço o que gosto e isso deixa-me feliz. Gosto de ter conhecimento básico/médio de várias áreas pois para quando precisar estou preparado para os desafios.</p>
+              <p>Enquanto estou a frente do computador adquiro vários tipos de conhecimento sobre o desenvolvimento de hardware/software/web/network tudo depende da necessidade de aprender no momento, todos os dias aprendo sempre algo novo e isso fascina-me, faço o que gosto e isso deixa-me feliz. Tenho conhecimento básico/médio de várias áreas pois para quando precisar estou preparado para os desafios.</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">Junho 2010 - a decorrer</span>
@@ -151,8 +151,9 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Coventry University</h3><div class="subheading mb-3">Coventry, West Midlands, United Kingdom</div>
-              <div class="subheading mb-3">Bachelor of Computer Science</div>
-              <div>Computing Science BSc (Hons) + Placement Year(2019)</div>
+              <div class="subheading mb-3">Bacharel em Ciência da Computação
+</div>
+              <div>Ciências da Computação BCC + Estágio(2019)</div>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">Setembro 2017 - a decorrer</span>
@@ -390,7 +391,7 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
-          <h2 class="mb-5">Interests</h2>
+          <h2 class="mb-5">Interesses</h2>
           <p>Além de ser programador, gosto de passar parte do meu tempo ao ar livre com meus amigos. Meus interesses são em torno de computadores, eu amo computador desde que eu era um menino eu cresci vendo a evolução do computador, em todos os termos, na frente dos meus olhos foi e está a ser maravilhoso / prodigioso de assistir, comecei a auto-estudar alguns conceitos básicos de computador quando eu tinha apenas 10 anos apenas pelo prazer de aprender algo sobre a máquina que estava perante mim e porque estava a aprender algo que não estava nos parâmetros da escola para ensinar, na época eu vi minha lógica / compreensão de capacidade de agir tomarem ação na área de programação, tenho um lema que gosto de dizer que é “Think & Execute”, desenvolvi uma relação muito forte com ela, não em termos de vício, mas em termos de necessidade de aprender mais e mais, numa maneira saudável sempre.</p>
         </div>
       </section>
@@ -404,7 +405,7 @@
               Participação no concurso <p class="triggerImage" data-toggle="modal" data-target="#exampleModal" id="Certi_Apps4Good">AppsForGood (Clique)</p></li>
             <li >
               <i class="fa-li fa fa-trophy text-warning"></i>
-              Specialized Tech./Voc <p class="triggerImage" data-toggle="modal" data-target="#exampleModal" id="Certi_before_Uny">Curso Técnico de
+              Cursos : <p class="triggerImage" data-toggle="modal" data-target="#exampleModal" id="Certi_before_Uny">Curso Técnico de
               Gestão e Programação de Sistemas Informáticos (Clique)</p></li>
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
@@ -436,7 +437,7 @@ $(".triggerImage").click(function (event) {
         var name=event.target.id;
         var img,img2;
           if(name === "Certi_before_Uny"){
-            /*Precisa de 2 loads pois cerificado tem 2 paginas*/
+            /*Precisa de 2 loads pois certificado tem 2 paginas*/
 
             img="<img style='width: 100%;height: auto;' src='img/certificates/"+name+".png'>"; 
             img2="<img style='width: 100%;height: auto%; bottom:0;' src='img/certificates/"+name+"2.png'>";
@@ -449,4 +450,6 @@ $(".triggerImage").click(function (event) {
   
   return alertify.alert(img, function(){ alertify.success('Checked'); }).set({'pinnable': true, 'modal':false, 'frameless': true});
 });
+
+$('[data-toggle="tooltip"]').tooltip();/*ativa tooltip cross-platform nos elementos que teem data-toggle="tooltip" + title */
 </script>
