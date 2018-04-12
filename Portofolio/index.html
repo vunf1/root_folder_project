@@ -5,8 +5,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="CV">
+    <meta name="author" content="Maia">
 
     <title>Portfolio - João Maia</title>
 
@@ -26,6 +26,11 @@
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
 
+
+    <!-- Allertify styles -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/bootstrap.min.css"/>
+
   </head>
 
   <body id="page-top">
@@ -35,8 +40,11 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
+
         <span class="d-block d-lg-none">Portfolio</span>
+
         <span class="d-none d-lg-block">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
         </span>
@@ -47,445 +55,40 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger loadDiv" id="g_about" >About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+            <a class="nav-link js-scroll-trigger loadDiv" id="g_experience">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+            <a class="nav-link js-scroll-trigger loadDiv" id="g_education">Education</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+            <a class="nav-link js-scroll-trigger loadDiv" id="g_skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+            <a class="nav-link js-scroll-trigger loadDiv" id="g_interests">Interests</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+            <a class="nav-link js-scroll-trigger loadDiv" id="g_awards">Certifications</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#project">Projects</a>
+            <a class="nav-link js-scroll-trigger loadDiv" id="g_project">Projects</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger">  <img class="transLogo" id="pt" src="img/pt_logo.png"><span> </span><img class="transLogo" id="eng" src="img/eng_logo.png"></a>
+          </li>
+
           <li >
               <p style="font-size: 10px;" class="footer lead">Designed by: <a id="copyrights" href="https://github.com/BlackrockDigital/startbootstrap-resume"><strong>Start Bootstrap </strong></a></p>
           </li>
         </ul>
       </div>
     </nav>
+<div class="container-fluid p-0 caixa">
+</div>
 
-    <div class="container-fluid p-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-        <div class="my-auto">
-          <h1 class="mb-0 text-warning">João
-            <span class="text-primary">Maia</span>
-          </h1>
-          <div class="subheading mb-5">1 King Richard Street · Coventry, CV2 4FU · (44) 07393557259 ·
-            <a class="text-secondary" href="mailto:jokass.workplace@gmail.com">jokass.workplace@gmail.com</a>
-          </div>
-          <p class="mb-5">This is my portfolio as an engineer of software/web developer</p>
-          <ul class="list-inline list-social-icons mb-0">
-            <li class="list-inline-item">
-              <a href="https://www.messenger.com/t/jokass.maia">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com/jokassmaia/">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/joao-maia/">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://github.com/vunf1/">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item exc">
-              <a href="https://github.coventry.ac.uk/deoiveij/">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-        <div class="my-auto">
-          <h2 class="mb-5">Experience</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Self - Studying Computer Concepts - lifetime passion</h3>
-              <div class="subheading mb-3">Autonomous</div>
-              <p>While I am on the computer I put more knowledge about hardware/software/web/network development depends on the need of what I want to do, every day I learn something new, I do what I like and it makes me happy. I like to have knowledge of various areas for when I need such skills am prepared.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June 2010 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Packing Bananas</h3>
-              <div class="subheading mb-3">Fyffes - Coventry, UK</div>
-              <p>Responsible to organize / pack bananas to they respective bags and then boxes and at the same time do housekeeping.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Febuary 2018 - April 2018</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Picker/Stock Replenishment</h3>
-              <div class="subheading mb-3">Toys”R”Us - Coventry, UK</div>
-              <p>Was responsible to fetch items to be packeted, sometimes repositioning the items and teaching new workers how to do the work, and at the same time do housekeeping.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">November 2017 - December 2017</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Software Developer - intership</h3>
-              <div class="subheading mb-3"><a href="https://www.medsky.pt/">Medsky</a> - V.N.G, Portugal</div>
-              <p>Developed a license management system for various services, remotely controlled (RESTfull system), using Code Igniter framework for PHP, jQuery/AlertifyJS and Bootstrap.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">January 2017 - March 2017</span>
-            </div>
-          </div>
-<br>
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Software Developer - intership </h3>
-              <div class="subheading mb-3"><a href="https://www.medsky.pt/">Medsky</a> - V.N.G, Portugal</div>
-              <p>Software update (from C# / HTML to VB.NET), with propose of decreasing the memory used, this solution is “runned” by a CD. Helped in the campaign of solidarity made by Portuguese Red Cross, where catched the location of the 3G/4G antennas and create a spreadsheet with the best direction for they direct the antenna to send the tracking data on each place they went during the campaign.Configuration of the router MikroTik RouterBoard RB750G.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">May 2016 - June 2016</span>
-            </div>
-          </div>
-<br>
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Machine Operator</h3>
-              <div class="subheading mb-3">Contecnica - V.N.G, Portugal</div>
-              <p>Operator of machine, cutting/polish of materials as stainless steel / aluminum / iron and maintenance of the same.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">March 2012 - Febuary 2013</span>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Coventry University</h3><div class="subheading mb-3">Coventry, West Midlands, United Kingdom</div>
-              <div class="subheading mb-3">Bachelor of Computer Science</div>
-              <div>Computing Science BSc (Hons) + Placement Year(2019)</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2017 - Current</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Arquitecto Oliveira Ferreira School</h3>
-              <div class="subheading mb-3">ARCOZELO, VNG, PORTO, PORTUGAL</div>
-              <div class="subheading mb-3">Technician Of Management and Programming Of Computer Systems - PROFESSIONAL COURSE</div>
-              <p>10<sup>th</sup> & 12<sup>th</sup> Specialized Tech./Voc <br>Programming in object-oriented languages, locally and via the web, management of software with installation and configuration of the same.<br>Maintenance/Management of computers, operating systems, networks environments and web servers.<br>Analysis of information systems.<br>Analysis and Implementation of Database Management Systems;<br>Individual final year project: System of management license for services (RESTful, SCRUD), with dashboard, remotely controlled and login system, developed in Code Igniter, max grade achieved on the project.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2014 - June 2017</span>
-            </div>
-          </div>
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">GAIA Professional School</h3>
-              <div class="subheading mb-3">VNG, PORTO, PORTUGAL</div>
-              <div class="subheading mb-3">PROGRAMMING AND MACHINING CNC - PROFESSIONAL COURSE</div>
-              <p>10<sup>th</sup> & 12<sup>th</sup> Specialized Tech./Voc <br>In this course I took the knowledge of basic CNC programming and graphic design (2D/3D) using AutoCAD. Didn’t complete, I came out in the end of tenth grade because it wasn’t a specialized course in the area of software programming but in the area of CNC machines and I didn’t want to specialize in that area, and on the end of first year I found a course that was exactly what I wanted to give continuity in my life.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2013 - June 2013</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Arquitecto Oliveira Ferreira School</h3>
-              <div class="subheading mb-3">ARCOZELO, VNG, PORTO, PORTUGAL</div>
-              <div class="subheading mb-3">TECHNICIAN OF MANAGEMENT INFORMATICS - PROFESSIONAL COURSE</div>
-              <p>10<sup>th</sup> & 12<sup>th</sup> Specialized Tech./Voc <br>In this course, I became aware of some of the terms used in economics and the basic concepts of object oriented programming. Didn’t complete, I came out in the end of tenth grade because it wasn’t a specialized course in the area of programming but in the area of economics and I didn’t want to specialize in that area.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2012 - June 2013</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">EB3 Arquitecto Oliveira Ferreira School</h3>
-              <div class="subheading mb-3">Arcozelo, VNG, Porto, Portugal</div>
-              <p>7<sup>th</sup> & 9<sup>th</sup> Basic Third Stage <br>National Exam - Math: 88<sup>%</sup>, Portuguese: 60<sup>%</sup></p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2009 - June 2012</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">EB2/3 Sophia De Mello Breyner School </h3>
-              <div class="subheading mb-3">Arcozelo, VNG, Porto, Portugal</div>
-              <p>5<sup>th</sup> & 6<sup>th</sup> Basic Second Stage <br>National Exam - Math: 80<sup>%</sup>, Portuguese: 65<sup>%</sup></p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2007 - June 2009</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">EB1 Morangal School </h3>
-              <div class="subheading mb-3">Arcozelo, VNG, Porto, Portugal</div>
-              <p>2<sup>nd</sup> & 4<sup>th</sup> Basic First Stage</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Setember 2004 - June 2007</span>
-            </div>
-          </div>
-
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">EB1 Sá School </h3>
-              <div class="subheading mb-3">Arcozelo, VNG, Porto, Portugal</div>
-              <p>1<sup>st</sup> & 2<sup>nd</sup> Basic First Stage
-</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Setember 2002 - June 2004</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-        <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
-
-          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-          <p>Web Development</p>
-          <ul class="list-inline list-icons">
-            <li class="list-inline-item " data-toggle="tooltip" 
-    data-placement="bottom" title="HTML5">
-              <i class="devicons devicons-html5 "></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="CSS">
-              <i class="devicons devicons-css3"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="Native JaveScript">
-              <i class="devicons devicon-javascript-plain"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="PHP7">
-              <i class="devicon-php-plain"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="Jquery Framework">
-              <i class="devicons devicons-jquery"></i>
-            </li>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="Bootstrap">
-              <i class="devicons devicons-bootstrap"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="CodeIgniter">
-              <i class="devicons devicons-codeigniter"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="WordPress">
-              <i class="devicon-wordpress-plain-wordmark"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="Npm">
-              <i class="devicons devicons-npm"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="Node.js">
-              <i class="devicons devicons-nodejs"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="Grunt">
-              <i class="devicons devicon-grunt-line"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="Apache">
-              <i class="devicons devicons-apache"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="Photoshop CS6 Extended">
-              <i class="devicon-photoshop-line"></i>
-            </li>
-            <li style="width: 60px; height: 70px;" class="list-inline-item " data-toggle="tooltip" 
-    data-placement="bottom"  title="Sql Database">
-              <i ><img style="margin-bottom: 10px;" src="img/sql.png" width="100%" height="80%"></i>
-            </li>
-          </ul>
-          <div class="subheading mb-2">Web Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li class="list-inline-item">
-              <i class="fa-li fa fa-check"></i>
-              <a style="color: #000000"><i class="devicons devicons-linux colored"></i></a>
-              Ubuntu -<a style="color: #000000"> Preferred</a></li>
-
-            <li>
-              <li class="list-inline-item">
-              <i class="fa-li fa fa-check"></i>
-              <i class="devicon-windows8-original colored"></i>
-              Windows Server 2008</li>
-
-            <li>
-            
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Responsive Design - Desktop & Mobile </li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              <i class="devicons devicon-chrome-plain-wordmark" data-toggle="tooltip" data-placement="bottom"  title="Google Chrome Browser"></i> and <i class="devicon-firefox-plain-wordmark" data-toggle="tooltip" data-placement="bottom" title="Mozilla Firefox Browser"></i> Browsers for Testing &amp; Debugging</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Sublime Text or Netbeans as editing tool</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum &amp; Kanban</li>
-
-            <li class="list-inline-item" title="Github">
-              <i class="fa-li fa fa-check"></i>
-              <i class="devicons devicon-github-plain"data-toggle="tooltip" data-placement="bottom" title="Github CLI"></i> tool to save the work
-            </li>
-          </ul>
-          <br>
-            <p>Software Development</p>
-            <ul class="list-inline list-icons">
-            <li class="list-inline-item">
-              <i class="devicon-cplusplus-line" data-toggle="tooltip" 
-    data-placement="bottom"  title="c++"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicon-visualstudio-plain" data-toggle="tooltip" data-placement="bottom" title="Visual Basic"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="Python">
-              <i class="devicon-python-plain-wordmark"></i>
-            </li>
-            <li class="list-inline-item" data-toggle="tooltip" 
-    data-placement="bottom"  title="C#">
-              <i class="devicon-csharp-line-wordmark"></i>
-            </li>
-            </li>
-          </ul>
-
-          <div class="subheading mb-2">Software Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li class="list-inline-item">
-              <i class="fa-li fa fa-check"></i>
-              <a style="color: #000000; "><i class="devicons devicons-linux colored"></i></a>
-              Ubuntu </li>
-
-            <li>
-              <li class="list-inline-item">
-              <i class="fa-li fa fa-check"></i>
-              <i class="devicon-windows8-original colored"></i>
-              Windows 7/8.1/10</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Responsive/Dynamic Design </li>
-            <li>
-            <i class="fa-li fa fa-check"></i>
-              Sublime Text & Visual Studio & CLI as Testing & Debugging & Editing tool</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum &amp; Kanban</li>
-          </ul>          
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-        <div class="my-auto">
-          <h2 class="mb-5">Interests</h2>
-          <p>Apart from being a programmer, I enjoy most of my time being outdoors with my friends. My interests are all around computers, I love computer since I was a little boy I grow up seeing the computer evolution, in all terms, in front of my eyes and that was and still wonderful/prodigious to watch, I started to self-study some basic computer concepts when I was 10 years old just for the pleasure of learning something about the machine that was in front of me and I was learning something that wasn’t in school parameters to teach, at the time I saw my logic/understanding ability take action, in the area of programming, I have a motto that I like that is “Think&Execute”, I develop a relationship very strong with it, not in terms of addiction but in terms of the need to learn more and more, in a healthy way always.</p>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-        <div class="my-auto">
-          <h2 class="mb-5">Awards &amp; Certifications</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Participation in the contest <p class="triggerImage" data-toggle="modal" data-target="#exampleModal" id="Certi_Apps4Good">AppsForGood (Click)</p></li>
-            <li >
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Specialized Tech./Voc <p class="triggerImage" data-toggle="modal" data-target="#exampleModal" id="Certi_before_Uny">Technician Of Management and Programming Of Computer Systems (Click)</p></li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Lynda.com Platform:<br><p class="triggerImage" data-toggle="modal" data-target="#exampleModal" id="Certi_essential_NodeJs">Certificate of Completion Node.js Essential Training (Click)</p></li>
-            <li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="project">
-        <div class="my-auto">
-          <h2 class="mb-5">Projects Online</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <h2 class="text-secondary">In Progress</h2>
-              
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
-
-<!-- MODAL Para os certifacados IMAGES-->
+<!-- MODAL Para os certifacados IMAGES
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -503,17 +106,42 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
  <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+        
 
+
+$(".triggerImage").click(function (event) {
+  /*Certificados introdução dinamica das imagens usando um layout mais elegante new:alertify old:modal(bootstrap)*/
+        var name=event.target.id;
+        var img,img2;
+          if(name === "Certi_before_Uny"){
+            /*Precisa de 2 loads pois cerificado tem 2 paginas*/
+
+            img="<img style='width: 100%;height: auto;' src='img/certificates/"+name+".png'>"; 
+            img2="<img style='width: 100%;height: auto%; bottom:0;' src='img/certificates/"+name+"2.png'>";
+            alertify.alert(img, function(){
+                 alertify.alert(img2, function(){ alertify.success('Checked'); })
+                  }).set({'pinnable': true, 'modal':false, 'frameless': true});
+            
+  }
+  img="<img style='width: 100%;height: auto;' src='img/certificates/"+name+".png'>";
+  
+  return alertify.alert(img, function(){ alertify.success('Checked'); }).set({'pinnable': true, 'modal':false, 'frameless': true});
+});
+</script>
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
 
+    <!-- Custom scripts for this template https://alertifyjs.org-->
+<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/alertify.min.js"></script>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 

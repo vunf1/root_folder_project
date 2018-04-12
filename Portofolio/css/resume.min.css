@@ -50,11 +50,27 @@ p{color:#000000;text-align: justify;text-justify: inter-word}
 	background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
 }
 #loading{
+	/*IMG enquanto da load da pagina*/
     position: fixed;
-    top: 15%;
+    top: 25%;
     left: 90%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     align-content: center;
     font-family:raleway;
+}
+#pt{
+	width: 62px;
+	height: 52px;
+
+}
+#eng{
+	width: 60px;
+	height: 40px;
+
+}
+
+.clickable,.clickable2
+{
+    cursor: pointer;
 }
