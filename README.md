@@ -1,8 +1,9 @@
-# Create a design for root folder
-__Prototype__
+-[ ] Create a design for root folder
+__ Random Projects__
 
 ### Projects in:
-- [x] Nexus (Web)
+- [x] Nexus (Web), CodeIgniter
 - [x] Portfolio (Web)
-- [ ] MedCD (Software)
+- [x] App Bar App (Future Impl. Android APP), CodeIgniter
+- [ ] MedCD (Software), VB.net
 - [ ] Random Websites (Web)
