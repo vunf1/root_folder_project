@@ -1,0 +1,301 @@
+html,body{
+  height: 100%;
+}
+.max-width{
+    width: 100%;
+}
+    body {
+        background: url(galaxia.gif);
+        background-color: rgb(51,51,87);
+        background-repeat:no-repeat;
+        background-position:center; 
+
+
+        /*background-size: 100%;*/
+    }
+    @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Open Sans"), local("OpenSans"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/K88pR3goAWT7BTt32Z01mz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+    }
+    .base {
+        display: flex;
+        justify-content: center;
+    }
+    .conteudo {
+        width: 100%;
+        text-align: center;
+    }
+    .logo {
+        /*background-image: url(galaxia.gif);*/
+        width: 100%;
+        height: 250px;
+
+        background-size: cover;
+        /*filter: invert(80%);*/
+        /*margin: 7% auto auto auto;*/
+    }
+    .img_opacity{
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+
+    }
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+    .texto{
+
+        color: #000000;
+        font-size: 24px;
+        width: 100%;
+        height: 20%
+        font-family: Segoe UI;
+        margin: auto;
+    }
+    .botao1 {
+        padding: 10px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: open sans;
+        color: #fff;
+        width: 50%;
+        height: 35%;
+        line-height: 2.1;
+        /*border: 2px solid #ef4836;
+        border-radius: 2px;*/
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.51, 0.85);
+    }
+    /*
+    .botao2 {
+        float: right;
+        font-size: 24px;
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.51, 0.85);
+        text-transform: uppercase;
+        font-family: open sans;
+        color: #fff;
+        width: 40%;
+        height: 50px;
+        line-height: 2.1;
+        background-color: #ef4836;
+        border: 2px solid #ef4836;
+        border-radius: 2px;
+    }
+    .botao2:hover {
+        background-color: #d03c2d;
+        border: 2px solid #d03c2d;
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.51, 0.85);
+    }*/
+    .buttons {
+        width: 40%;
+        height: auto;
+        margin: 50px auto auto auto;
+    }
+    .centered {
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+        }
+
+
+
+
+
+
+
+/*PAGE 2 CSS*/
+.nav000 {
+    background-color: rgb(51,51,87);       
+}
+.nav001 {
+    padding-left: 0;
+    padding-top: 0;       
+}
+
+ @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+    @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+    .event-list {
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    margin: 20px;
+
+  }
+  .max-width{
+
+    margin-top:5%;
+  }
+  .event-list > li {
+    /*background-color: rgb(255, 255, 255);*/
+    box-shadow: 0px 0px 5px rgb(51, 51, 51);
+    box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+
+    margin: 0px 0px 20px;
+  }
+  .event-list > li > span {
+    display: none;
+  }
+  .event-list > li > img {
+    width: 100%;
+  }
+  .event-list > li > .info {
+    padding-top: 5px;
+    text-align: center;
+  }
+  .event-list > li > .info > .title {
+    font-size: 17pt;
+    font-weight: 700;
+    margin: 0px;
+        color: white;
+  }
+  .event-list > li > .info > .desc {
+    font-size: 13pt;
+    font-weight: 300;
+    margin: 0px;
+    width: 100%;
+        color: white;
+  }
+  .desc-allert {
+    font-size: 0.8em;
+    font-weight: 300;
+    margin: 0px;
+    width: 100%;
+  }
+  .event-list > li > .info > ul,
+  .event-list > li > .social > ul {
+    display: table;
+    list-style: none;
+    margin: 10px 0px 0px;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  .event-list > li > .social > ul {
+    margin: 0px;
+  }
+  .event-list > li > .info > ul > li,
+  .event-list > li > .social > ul > li {
+    display: table-cell;
+    cursor: pointer;
+    color: rgb(30, 30, 30);
+    font-size: 11pt;
+    font-weight: 300;
+        padding: 3px 0px;
+  }
+    .event-list > li > .info > ul > li > a {
+    display: block;
+    width: 100%;
+    color: rgb(30, 30, 30);
+    text-decoration: none;
+  } 
+    .event-list > li > .social > ul > li {    
+        padding: 0px;
+    }
+    .event-list > li > .social > ul > li > a {
+        padding: 3px 0px;
+  } 
+  .event-list > li > .info > ul > li:hover,
+  .event-list > li > .social > ul > li:hover {
+    color: rgb(30, 30, 30);
+    background-color: rgb(200, 200, 200);
+  }
+  .facebook a,
+  .twitter a,
+  .google-plus a {
+    display: block;
+    width: 100%;
+    color: rgb(75, 110, 168) !important;
+  }
+  .twitter a {
+    color: rgb(79, 213, 248) !important;
+  }
+  .google-plus a {
+    color: rgb(221, 75, 57) !important;
+  }
+  .facebook:hover a {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(75, 110, 168) !important;
+  }
+  .twitter:hover a {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(79, 213, 248) !important;
+  }
+  .google-plus:hover a {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(221, 75, 57) !important;
+  }
+
+  @media (min-width: 768px) {
+    .event-list > li {
+      position: relative;
+      display: block;
+      width: 100%;
+
+
+    }
+    .event-list > li > time,
+    .event-list > li > img  {
+      display: inline-block;
+    }
+    .event-list > li > time,
+    .event-list > li > img {
+      width: 120px;
+      float: left;
+    }
+    .event-list > li > .info {
+      background-color: rgb(245, 245, 245);
+      overflow: hidden;
+    }
+    .event-list > li > time,
+    .event-list > li > img {
+      width: 120px;
+      height: 120px;
+
+      margin: 0px;
+    }
+    .event-list > li > .info {
+      position: relative;
+      height: 120px;
+      text-align: left;
+
+    } 
+    .event-list > li > .info > .title, 
+    .event-list > li > .info > .desc {
+
+    }
+    .event-list > li > .info > ul {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+    }
+    .event-list > li > .social {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      display: block;
+      width: 40px;
+    }
+        .event-list > li > .social > ul {
+            border-left: 1px solid rgb(230, 230, 230);
+        }
+    .event-list > li > .social > ul > li {      
+      display: block;
+
+    }
+    .event-list > li > .social > ul > li > a {
+      display: block;
+      width: 40px;
+
+    }
+
+  }
+  /* FIM PAGE2*/
