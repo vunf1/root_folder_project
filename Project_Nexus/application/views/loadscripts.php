@@ -16,7 +16,7 @@
 
 
  -->
-<script type='text/javascript' src='<?php echo base_url()?>assets/js/jquery-ui.js'></script>
+<script type='text/javascript' src='<?php echo base_url('vunf1.coventry.domains')?>assets/js/jquery-ui.js'></script>
 
 
 
@@ -28,7 +28,7 @@
  
  <link rel="stylesheet" href="<?php echo base_url()?>assets/alertify/css/alertify.css">
 
- <script type="text/javascript" src="<?php echo base_url()?>assets/alertify/alertify.js"></script>
+ <script type="text/javascript" src="<?php echo base_url('vunf1.coventry.domains')?>assets/alertify/alertify.js"></script>
  
   
  <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap-select.css">
