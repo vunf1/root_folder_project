@@ -296,23 +296,18 @@ $("#TableCont").css("visibility","visible")};
        
         $(document).on('click', '#bt_create_serial', function(){ 
         
-    $.ajax({
-                    url:"<?php base_url('')?>create_newserial",
-                        method:"POST",
-                        dataType:'json',
-                        data:'',
-                        success:function(data)
-                                                {
-                                                    if(data==true){
-                                                        
-                                                    location.reload();
-                                                    
-        }
-                                                    
-                                                 }
-        //$('#user_table').html(data);
-                });
-                });
+          $.ajax({
+            url:"/HomeController/create_newserial",
+            method:"POST",
+            dataType:'json',
+            data:'',
+            success:function(data){
+              if(data==true){
+                location.reload();
+              }else{alert('Error: data not true on line 307 - home.php '); }
+            },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+          });
+        });
         
         
         
