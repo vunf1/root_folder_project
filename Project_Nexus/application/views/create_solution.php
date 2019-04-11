@@ -375,52 +375,44 @@ Pricing table
         
        
     
-        
-        function load_dashboard_solution(data){
+      
+function load_dashboard_solution(data){
     
+  console.log("DATA: "+data);
+  console.log("-------------------------");
     $.each ( data, function ( i, v ) { 
         $.each ( v, function ( key, val ) {
-           
-            true_val=val.split('_')[0].replace(/[^a-zA-Z 0-9]+/g,'');
+          console.log(val);
+          true_val=val.split('_')[0].replace(/[^a-zA-Z 0-9]+/g,'');
+          console.log(true_val);
           
-    rename_tr="<tr><td><img id=so_lo src='<?php ?>assets/images/logo_"+true_val+".png'></td><td>"+true_val+"</td><td class='text-center'><a class='btn btn-info btn-xs' id='edit_"+true_val+"' data-title='"+true_val+"' data-toggle='modal' data-target='.bd-example-modal-sm' ><span class='glyphicon glyphicon-edit'></span> Edit</a> <a id='del_"+true_val+"' data-title='"+true_val+"' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove' ></span> Del</a></td></tr>"
-    
-   
-    $(rename_tr).appendTo('#solution_table');
-    
-    
+          rename_tr="<tr><td><img id=so_lo src='<?php ?>assets/images/logo_"+true_val+".png'></td><td>"+true_val+"</td><td class='text-center'><a class='btn btn-info btn-xs' id='edit_"+true_val+"' data-title='"+true_val+"' data-toggle='modal' data-target='.bd-example-modal-sm' ><span class='glyphicon glyphicon-edit'></span> Edit</a> <a id='del_"+true_val+"' data-title='"+true_val+"' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove' ></span> Del</a></td></tr>"
           
-        $(document).on('click', '#edit_'+true_val , function(){
+        
+          $(rename_tr).appendTo('#solution_table');
+          $(document).on('click', '#edit_'+true_val , function(){
+            
             $('#rename_').html('');
-         $true=$(this).data('title');
-         
-       div="<li><input class='form-control' type='text' placeholder='Actual Solution Name' value='"+$true+"' id='old_solution_name'></input></li><li><input class='form-control' type='text' placeholder='New Solution Name'  id='new_solution_name'></input></li>";
-    
-   
-  $(div).appendTo('#rename_');
-         
-        
+            
+            $true=$(this).data('title');
+              
+            div="<li><input class='form-control' type='text' placeholder='Actual Solution Name' value='"+$true+"' id='old_solution_name'></input></li><li><input class='form-control' type='text' placeholder='New Solution Name'  id='new_solution_name'></input></li>";
+          
+            $(div).appendTo('#rename_');
+              
+              
+          });
+              
+              
+          $(document).on('click', '#del_'+true_val , function(){
+              
+          $true=$(this).data('title');
+          del_solu($true);
+          });
+      });
     });
-         
-         
-         $(document).on('click', '#del_'+true_val , function(){
-             
-         $true=$(this).data('title');
-         del_solu($true);
-         
-         
-        
-    });
-     
-     
-    
-    
-    
-    }); 
-    
-    
-    });
-    }
+
+  }
         
         
         </script>
