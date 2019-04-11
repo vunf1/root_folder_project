@@ -645,9 +645,11 @@ public function get_tables_name() {
         array_push($ok,$table);
         
     }*/
-    $first=str_replace('Tables_in_vunfcove_solutions (%_serials)','0',json_encode($tables->result(),JSON_FORCE_OBJECT));
-    return str_replace(str_split('{}'),'',$first);
- }
+    $first=str_replace('Tables_in_vunfcove_solutions (%_serials)','0',json_encode($tables->result(),true));
+    $sec=str_replace(str_split('{}[]'),'',$first);
+        return '{'+$sec+'}';
+ 
+    }
  
  
  
