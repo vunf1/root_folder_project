@@ -347,23 +347,18 @@ Pricing table
     
     <script>
         
-        
-        
-         $( document ).ready(function() {
-            
-            $.ajax({
-                    url:"<?php base_url('')?>get_solution_name",
-                        method:"POST",
-                        dataType:'json',
-                        success:function(data)
-                                                {
-                                                    
-                                                  load_dashboard_solution(data);
-                                                  
-                                                  
-                                                  
-                                                 },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
-        //$('#user_table').html(data);
+        $( document ).ready(function() {
+           $.ajax({
+              url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/get_solution_name",
+              method:"POST",
+              dataType:'json',
+              success:function(data){
+                console.log(data);
+                console.log("--***---");
+                
+                load_dashboard_solution(data);
+              },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+  //$('#user_table').html(data);
                 });
             
             
@@ -413,12 +408,9 @@ function load_dashboard_solution(data){
     });
 
   }
+  </script>
         
         
-        </script>
-        
-        <style>
-            </style>
         
     <!--RENAME -->
 	<div id="myModal" class="modal fade in bd-example-modal-sm">
