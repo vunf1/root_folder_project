@@ -56,7 +56,7 @@
             $.ajax({
               url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/get_solution_name",
               method:"POST",
-              dataType:'JSON',
+              dataType:'json',
               success:function(data){
                 console.log(data);
             console.log("---------DDDD-----------");
