@@ -645,7 +645,7 @@ $tables = $this->db->list_tables();
 
 foreach ($tables as $table)
 {
-    aaray_push($ok,$table);
+    array_push($ok,$table);
     
 }
 echo json_encode($ok);
