@@ -640,7 +640,10 @@ public function get_tables_name() {
     
     foreach ($tables->result() as $table)
     {
-        array_push($ok,$table);
+        foreach ($table as $t)
+        {
+        array_push($ok,$t);
+        }
         
     }
     /*
