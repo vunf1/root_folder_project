@@ -503,7 +503,7 @@
     });
     
     $.ajax({
-      url: "<?php ?>/Solutioncontroller/userinfo",
+      url: "/root_folder_project/Project_Nexus/Solutioncontroller/userinfo",
       dataType:'json',
       method:"POST",
       data: {'id':<?php echo $this->session->userdata('username');?>},
