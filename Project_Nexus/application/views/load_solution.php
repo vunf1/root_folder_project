@@ -57,7 +57,7 @@
               url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/get_solution_name",
               method:"POST",
               cache: false,
-              dataType:'json',
+              
               success:function(data){
                 console.log("---------DDDD-----------");
                 console.log(data);
