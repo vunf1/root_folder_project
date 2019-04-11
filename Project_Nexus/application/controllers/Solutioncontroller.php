@@ -182,7 +182,7 @@ public function index() {
         
             
         $data=$this->Tionmodel->get_tables_name();
-       return json_encode($data);
+       return $data;
         
     }
     

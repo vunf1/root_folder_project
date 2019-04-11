@@ -645,7 +645,7 @@ public function get_tables_name() {
         array_push($ok,$table);
         
     }*/
-    return $tables->result_array();
+    return json_encode($tables->result_array());
     
  }
  
