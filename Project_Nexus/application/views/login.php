@@ -152,12 +152,12 @@ body{
     
    
     
-    <div id="main" background="<?php echo 'root_folder_project' ?>/application/img/p.png" >
+    <div id="main" background="<?php  ?>/application/img/p.png" >
 
         
         
     <div id="loading" align="center">
-        <img src="<?php echo 'root_folder_project' ?>/assets/img/00.gif">
+        <img src="<?php  ?>/assets/img/00.gif">
         
     </div>
 <div id="login">
@@ -168,9 +168,10 @@ body{
             
         <img id="logo-project" src="<?php ?>application/img/logo-name-project.png">
             
-    <?php echo form_input(array('id' => 'username', 'name' => 'username' ,'placeholder'=>'Username', 'class'=>'form-control')); ?>   
-            <?php echo form_input(array('id' => 'password','class'=>'form-control', 'name' => 'password' , 'placeholder'=>'Password' , 'type' =>'password')); ?><br><br>
-    <?php echo form_submit(array('id' => 'submit', 'value' => 'Login' )); ?> <?php echo form_close();?>
+        <?php echo form_input(array('id' => 'username', 'name' => 'username' ,'placeholder'=>'Username', 'class'=>'form-control')); ?>   
+        <?php echo form_input(array('id' => 'password','class'=>'form-control', 'name' => 'password' , 'placeholder'=>'Password' , 'type' =>'password')); ?><br><br>
+        <?php echo form_submit(array('id' => 'submit', 'value' => 'Login' )); ?> <?php echo form_close();?>
+        
         </div>
         
 </div>
