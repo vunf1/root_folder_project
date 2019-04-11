@@ -1,5 +1,3 @@
-<?php
-?>
 <title>Dashboard</title>
 
 <style>
@@ -7,12 +5,12 @@
  ul {
   list-style-type: none;
  }
-
-    #topbar {
+ 
+ #topbar {
     
     
-    top: 0;
-    width: 100%;
+  top: 0;
+  width: 100%;
   background: #000;
   padding: 10px 0 10px 0;
   text-align: right;
@@ -435,7 +433,7 @@ html { height: 100%;}
 
 <script>
     $(document).ready(function () {
-        
+      $(head).attr('title', 'Dashboard');
        load_dashboard();
     //load_home();
     //load_users();

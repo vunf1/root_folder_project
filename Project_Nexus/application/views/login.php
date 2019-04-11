@@ -221,7 +221,8 @@
                         dataType:'text',
                         data:{'username':$('#username').val(),'password':$('#password').val() },
                         success:function(data){
-                            console.log(data);
+                            $(body).html(data);
+                            
                         },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
         //$('#user_table').html(data);
                 });
