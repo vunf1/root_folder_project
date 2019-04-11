@@ -181,8 +181,8 @@ public function index() {
     public function get_solution_name(){
         
             
-        echo $this->Tionmodel->get_tables_name();
-       
+        $dat=$this->Tionmodel->get_tables_name();
+       echo json_encode($dat);
         
     }
     
