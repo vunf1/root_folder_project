@@ -160,7 +160,7 @@
     <div id="login">
     <div align="center">
     
-    <?php echo form_open('LoginController/login_user'); ?>
+    <?php //echo form_open('LoginController/login_user'); ?>
     <div class="form-group" align="center">
         
         <img id="logo-project" src="<?php ?>application/img/logo-name-project.png">
@@ -169,7 +169,7 @@
         <?php echo form_input(array('id' => 'password','class'=>'form-control', 'name' => 'password' , 'placeholder'=>'Password' , 'type' =>'password')); ?><br><br>
         <?php echo form_submit(array('id' => 'submit', 'value' => 'Login' )); ?> 
         
-        <?php echo form_close();?>
+        <?php //echo form_close();?>
     
     </div>
         
@@ -184,13 +184,15 @@
     <!-- <img id="logo-project" src="<?php ?>application/img/logo-name-project.png">-->
     <div align="center">
         
-    <?php echo form_open('LoginController/login_user'); ?>
+    <?php //echo form_open('LoginController/login_user'); ?>
         <div class="form-group" align="center">
             
-    <?php echo form_input(array('id' => 'username', 'name' => 'username' ,'placeholder'=>'Username', 'class'=>'form-control')); ?>   
-            <?php echo form_input(array('id' => 'password','class'=>'form-control', 'name' => 'password' , 'placeholder'=>'Password' , 'type' =>'password')); ?><br><br>
-    <?php echo form_submit(array('id' => 'submit', 'value' => 'Login' )); ?> <?php echo form_close();?>
-        </div>
+        <?php echo form_input(array('id' => 'username', 'name' => 'username' ,'placeholder'=>'Username', 'class'=>'form-control')); ?>   
+                <?php echo form_input(array('id' => 'password','class'=>'form-control', 'name' => 'password' , 'placeholder'=>'Password' , 'type' =>'password')); ?><br><br>
+        <?php echo form_submit(array('id' => 'submit', 'value' => 'Login' )); ?> 
+    <?php //echo form_close();?>
+    
+    </div>
         
     </div>
     <!--<input type="text" name="username" id="username" placeholder="username"/><br /><br />-->
@@ -208,9 +210,11 @@
         
   
       $(document).on('click','#submit',function(){
-          $('#login').hide();
-          $("#loading").css("display", "block");
+          //$('#login').hide();
+          //$("#loading").css("display", "block");
+          console.log($('#username').val());
        
+          console.log($('#password').val());
       })
       
       
