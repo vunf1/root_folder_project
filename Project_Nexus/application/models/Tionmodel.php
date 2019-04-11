@@ -5,30 +5,26 @@ class Tionmodel extends CI_Model{
 public function userinfo($username)
 {    
     $query = $this->db->select('*')->from('users')->where('id',$username)->get();
-                    
-                foreach ($query->result_array() as $row)
-        {
-                    echo json_encode($row);
-        }
-     /*if($query->num_rows()==1){
-        
-     //} */
+    foreach ($query->result_array() as $row){
+        echo json_encode($row);
+    }
+    
 }
   
 
 
-public function chat_send($user,$text)
-{
+public function chat_send($user,$text){
+
     $data = array(
             'user' => $user ,
             'texto'=>$text
-);
+    );
 
-if($this->db->insert('chat_log', $data)){
+    if($this->db->insert('chat_log', $data)){
 
-    return true;
-    
-}
+        return true;
+        
+    }
     
     
 }   
@@ -36,8 +32,7 @@ if($this->db->insert('chat_log', $data)){
 
 
   
-public function checklogin($username,$pwd)
-{    
+public function checklogin($username,$pwd){    
      $query=$this->db
              ->select('*')
              ->from('users')
@@ -121,11 +116,9 @@ public function logout() {
             ->get();
     
     if($query->num_rows()==1){
-        
-        
-                        $data=array(
-                            'log'=>'0'
-                        );
+        $data=array(
+            'log'=>'0'
+        );
                         
        $this->db->from('users')->where('id',$this->session->userdata('username'))->update('users',$data);
     
@@ -133,7 +126,7 @@ public function logout() {
         $newdata = array(
                'logged_in' => false
               );
-                            $this->session->set_userdata($newdata);
+              $this->session->set_userdata($newdata);
                            
      //return true;
     
@@ -147,43 +140,41 @@ public function logout() {
 public function fetchRowId($id) {
     $sol=$this->session->userdata('solution');
     
-            $query = $this->db->query("SELECT * FROM ".$sol+"_serials WHERE Id ="+$id);
-            return json_encode($query->result());
+    $query = $this->db->query("SELECT * FROM ".$sol+"_serials WHERE Id ="+$id);
+    return json_encode($query->result());
 }   
     
 
-public function get_requests()
-{$sol=$this->session->userdata('solution');
+public function get_requests(){
+
+    $sol=$this->session->userdata('solution');
+    $query = $this->db->query("SELECT * FROM ".$sol."_requests");
     
-      $query = $this->db->query("SELECT * FROM ".$sol."_requests");
-      
-     return json_encode($query->result());  
+    return json_encode($query->result());  
    
-}public function get_requestsId($Id,$sol)
-{
+}
+public function get_requestsId($Id,$sol){
     
-       $this->db->select('*');
-                       $this->db->from($sol.'_requests');
-                       $this->db->where('Id',$Id);
-                    $query = $this->db->get();
-                    return $query->result();
+    $this->db->select('*');
+    $this->db->from($sol.'_requests');
+    $this->db->where('Id',$Id);
+    $query = $this->db->get();
+    return $query->result();
    
 }
 
 
 
-public function get_serials($id = NULL)
-{
+public function get_serials($id = NULL){
+
     $sol=$this->session->userdata('solution');
     if($id){
       $query = $this->db->query("SELECT * FROM ".$sol."_serials WHERE Id ="+$id);
-     return json_encode($query->result());  
-    }else
+      return json_encode($query->result());  
+    }else{
     
-    //$this->db->get();
-
      $query = $this->db->query("SELECT * FROM ".$sol."_serials");
-     return json_encode($query->result());
+     return json_encode($query->result());}
     
     
     
@@ -194,11 +185,11 @@ public function list_requests()
     $sol=$this->session->userdata('solution');
 
 	$this->db->select('*');
- $this->db->from($sol.'_requests');
- $this->db->order_by('id', 'DESC');
+    $this->db->from($sol.'_requests');
+    $this->db->order_by('id', 'DESC');
 
- $query = $this->db->get();
- return $query->result();
+    $query = $this->db->get();
+    return $query->result();
 }
 
 
@@ -208,11 +199,12 @@ public function create_new_serial()
     $sol=$this->session->userdata('solution');
     
     $this->load->helper('string');
-$size8=random_string('alnum',8);
-$size4=random_string('alnum',4);
-$size4_2=random_string('alnum',4);
-$size4_3=random_string('alnum',4);
-$size12=random_string('alnum',12);
+
+    $size8=random_string('alnum',8);//alphanumeric
+    $size4=random_string('alnum',4);
+    $size4_2=random_string('alnum',4);
+    $size4_3=random_string('alnum',4);
+    $size12=random_string('alnum',12);
 	//do {
 		$serial=$size8."-".$size4."-".$size4_2."-".$size4_3."-".$size12;
 		
@@ -501,23 +493,23 @@ status varchar(1),
                
             $serial_collumn = array(
                         'Id' =>array('type' => 'bigint','constraint'=>10,
-                                    'auto_increment' => TRUE,'unsigned'=>true)
-                   ,'serial' => array('type' => 'VARCHAR',
-                            'constraint'=>36)
-                   ,'hwfingerprint' => array('type' => 'VARCHAR',
-                            'constraint'=>36,'null' => true)
-                   ,'expirationdate' => array('type' => 'date')
-                   ,'period' => array('type' => 'int','constraint'=>11)
-                   ,'lictype' => array('type' => 'varchar','constraint'=>10)
-                   ,'status' => array('type' => 'varchar','constraint'=>1)
-                   ,'description' => array('type' => 'varchar','constraint'=>255));
+                        'auto_increment' => TRUE,'unsigned'=>true),
+                        'serial' => array('type' => 'VARCHAR',
+                        'constraint'=>36),
+                        'hwfingerprint' => array('type' => 'VARCHAR',
+                        'constraint'=>36,'null' => true),
+                        'expirationdate' => array('type' => 'date'),
+                        'period' => array('type' => 'int','constraint'=>11),
+                        'lictype' => array('type' => 'varchar','constraint'=>10),
+                        'status' => array('type' => 'varchar','constraint'=>1),
+                        'description' => array('type' => 'varchar','constraint'=>255));
     $this->dbforge->add_field($serial_collumn);
     $this->dbforge->add_key('Id',TRUE);
- if($this->dbforge->create_table($solution_name.'_serials', TRUE)){
-     
-    return true;
-}else{return false;}
-    
+    if($this->dbforge->create_table($solution_name.'_serials', TRUE)){
+        
+        return true;
+    }else{return false;}
+        
     
     
  }
@@ -693,65 +685,65 @@ public function del_req($Id,$sol) {
     
      
  public function update_status($id,$sel) {
-     
-         
-$data= array(
-         'status'=>$sel);
-      
-      
-         
+        
+            
+    $data= array(
+            'status'=>$sel);
+        
+        
+            
 
-$where = "id =".$id;
+    $where = "id =".$id;
 
 
-if($this->db->update('users', $data, $where)){
-    
-    return 1;
-} else{return 0;}
-    
-     
+    if($this->db->update('users', $data, $where)){
+        
+        return 1;
+    } else{return 0;}
+        
+        
      
      
  }
 public function update_serial_status($id,$sel,$sol){
-     
-         
-$data= array(
-         'status'=>$sel);
-      
-      
-         
+        
+            
+    $data= array(
+            'status'=>$sel);
+        
+        
+            
 
-$where = "id =".$id;
+    $where = "id =".$id;
 
 
-if($this->db->update($sol.'_serials', $data, $where)){
-    
-    return 1;
-} else{return 0;}
-    
-     
-     
+    if($this->db->update($sol.'_serials', $data, $where)){
+        
+        return 1;
+    } else{return 0;}
+        
+        
+        
      
  }
 public function update_serial_lic($id,$sel,$sol){
      
-         
-$data= array(
-         'lictype'=>$sel);
-      
-      
-         
+            
+    $data= array(
+            'lictype'=>$sel);
+        
+        
+            
 
-$where = "id =".$id;
+    $where = "id =".$id;
 
 
-if($this->db->update($sol.'_serials', $data, $where)){
-    
-    return 1;
-} else{return 0;}
-    
-     
+    if($this->db->update($sol.'_serials', $data, $where)){
+        
+        return 1;
+    } else{return 0;}
+        
+        
      
      
  }

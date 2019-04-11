@@ -53,18 +53,14 @@
         $( document ).ready(function() {
             
             $.ajax({
-                    url:"<?php ?>get_solution_name",
-                        method:"POST",
-                        dataType:'json',
-                        success:function(data)
-                                                {
-                                                    
-                                                  load_dashboard(data);
-                                                  
-                                                  
-                                                  
-                                                 },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
-        //$('#user_table').html(data);
+              url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/get_solution_name",
+              method:"POST",
+              dataType:'json',
+              success:function(data){
+                console.log(data);
+                load_dashboard(data);
+              },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+//$('#user_table').html(data);
                 });
             
             
