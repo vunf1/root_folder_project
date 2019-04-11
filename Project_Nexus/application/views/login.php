@@ -1,3 +1,11 @@
+
+<head>
+    <title>Login Platform</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
+</head>
+<body  id="body">
+
 <style>
     
         
@@ -139,12 +147,6 @@
         height: 40%;
     }
 </style>
-<head>
-    <title>Login Platform</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
-</head>
-<body  id="body">
 <!--background="<?php ?>application/img/p.png" -->
     
    
@@ -187,8 +189,8 @@
     <?php //echo form_open('LoginController/login_user'); ?>
         <div class="form-group" align="center">
             
-        <?php echo form_input(array('id' => 'username', 'name' => 'username' ,'placeholder'=>'Username', 'class'=>'form-control')); ?>   
-                <?php echo form_input(array('id' => 'password','class'=>'form-control', 'name' => 'password' , 'placeholder'=>'Password' , 'type' =>'password')); ?><br><br>
+        <?php echo form_input(array('id' => 'usernames', 'name' => 'usernames' ,'placeholder'=>'Username', 'class'=>'form-control')); ?>   
+                <?php echo form_input(array('id' => 'passwords','class'=>'form-controls', 'name' => 'password' , 'placeholder'=>'Password' , 'type' =>'password')); ?><br><br>
         <?php echo form_submit(array('id' => 'submit', 'value' => 'Login' )); ?> 
     <?php //echo form_close();?>
     
