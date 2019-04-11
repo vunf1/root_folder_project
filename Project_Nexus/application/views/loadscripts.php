@@ -10,25 +10,25 @@
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script type='text/javascript' src='<?php ?>assets/js/jquery.js'></script>
+<script type='text/javascript' src='https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/js/jquery.js'></script>
 
 
  -->
-<script type='text/javascript' src='<?php ?>assets/js/jquery-ui.js'></script>
+<script type='text/javascript' src='https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/js/jquery-ui.js'></script>
   
-<script type="text/javascript" src="<?php ?>assets/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/js/jquery-1.9.1.min.js"></script>
    
-<script type="text/javascript" src="<?php ?>assets/js/jquery.session.js"></script>
+<script type="text/javascript" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/js/jquery.session.js"></script>
 
  
  
-<link rel="stylesheet" href="<?php ?>assets/alertify/css/alertify.css">
+<link rel="stylesheet" href="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/alertify/css/alertify.css">
 
-<script type="text/javascript" src="<?php ?>assets/alertify/alertify.js"></script>
+<script type="text/javascript" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/alertify/alertify.js"></script>
  
   
-<link rel="stylesheet" href="<?php ?>assets/css/bootstrap-select.css">
-<script type="text/javascript" src="<?php ?>assets/js/bootstrap-select.js"></script>
+<link rel="stylesheet" href="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/css/bootstrap-select.css">
+<script type="text/javascript" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/js/bootstrap-select.js"></script>
  
  
  
