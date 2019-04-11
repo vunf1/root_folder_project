@@ -57,7 +57,8 @@ function login_user() {
                                     'logged_in' => TRUE
                                                         );
                             $this->session->set_userdata($newdata);
-                            redirect('solution');
+                            $this->load->view('solution');
+                            
          }
          if($this->Tionmodel->checklogin($username,$pass)=='okuser')
          {
@@ -68,7 +69,8 @@ function login_user() {
                                     'logged_in' => TRUE
                                                         );
                             $this->session->set_userdata($newdata);
-                            redirect('solution');
+                            
+                            $this->load->view('solution');
          }
          
          if($this->Tionmodel->checklogin($username,$pass)=='Dev')
@@ -80,7 +82,8 @@ function login_user() {
                                     'logged_in' => TRUE
                                                         );
                             $this->session->set_userdata($newdata);
-                            redirect('solution');
+                            
+                            $this->load->view('solution');
          }
          
       }else{redirect('login');}
