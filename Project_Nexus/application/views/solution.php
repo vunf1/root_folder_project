@@ -526,7 +526,7 @@
       alertify.success('Loading Management Solutions');
       alertify.set('notifier','delay', delay);
   
-      $("#container_view").html(' <div ><object type="text/html" data="<?php?>/Solutioncontroller/solution_management" style="width:100%; height:100%;"></object></div>');
+      $("#container_view").html(' <div ><object type="text/html" data="/Solutioncontroller/solution_management" style="width:100%; height:100%;"></object></div>');
         // $('#obj_medcd').css('witdh','100%');
       
       };
@@ -539,7 +539,7 @@
       alertify.success('Loading Dashboard');
       alertify.set('notifier','delay', delay);
       
-      $("#container_view").html(' <div ><object type="text/html" data="<?php?>/Solutioncontroller/Load_dashboard_solution" style="width:100%; height:100%;"></object></div>');
+      $("#container_view").html(' <div ><object type="text/html" data="/Solutioncontroller/Load_dashboard_solution" style="width:100%; height:100%;"></object></div>');
     
     };
        
@@ -549,7 +549,7 @@
     function load_home() {
         
      
-     $("#container_view").html(' <div ><object type="text/html" data="<?php?>/HomeController/Index" style="width:100%; height:100%;"></object></div>');
+     $("#container_view").html(' <div ><object type="text/html" data="/HomeController/Index" style="width:100%; height:100%;"></object></div>');
     
     };
 
@@ -581,7 +581,7 @@
       alertify.success('Loading Users Management');
       alertify.set('notifier','delay', delay);
     
-     $("#container_view").html(' <div ><object type="text/html" data="<?php?>/Solutioncontroller/muser" style="width:100%; height:100%;"></object></div>');
+     $("#container_view").html(' <div ><object type="text/html" data="/Solutioncontroller/muser" style="width:100%; height:100%;"></object></div>');
           
     };
 
