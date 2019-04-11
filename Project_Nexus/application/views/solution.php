@@ -528,7 +528,7 @@
       alertify.success('Loading Management Solutions');
       alertify.set('notifier','delay', delay);
   
-      $("#container_view").html(' <div ><object type="text/html" data="/Solutioncontroller/solution_management" style="width:100%; height:100%;"></object></div>');
+      $("#container_view").html(' <div ><object type="text/html" data="/root_folder_project/Project_Nexus/Solutioncontroller/solution_management" style="width:100%; height:100%;"></object></div>');
         // $('#obj_medcd').css('witdh','100%');
       
       };
@@ -541,7 +541,7 @@
       alertify.success('Loading Dashboard');
       alertify.set('notifier','delay', delay);
       
-      $("#container_view").html(' <div ><object type="text/html" data="/Solutioncontroller/Load_dashboard_solution" style="width:100%; height:100%;"></object></div>');
+      $("#container_view").html(' <div ><object type="text/html" data="/root_folder_project/Project_Nexus/Solutioncontroller/Load_dashboard_solution" style="width:100%; height:100%;"></object></div>');
     
     };
        
@@ -551,7 +551,7 @@
     function load_home() {
         
      
-     $("#container_view").html(' <div ><object type="text/html" data="/HomeController/Index" style="width:100%; height:100%;"></object></div>');
+     $("#container_view").html(' <div ><object type="text/html" data="/root_folder_project/Project_Nexus/HomeController/Index" style="width:100%; height:100%;"></object></div>');
     
     };
 
@@ -583,7 +583,7 @@
       alertify.success('Loading Users Management');
       alertify.set('notifier','delay', delay);
     
-     $("#container_view").html(' <div ><object type="text/html" data="/Solutioncontroller/muser" style="width:100%; height:100%;"></object></div>');
+     $("#container_view").html(' <div ><object type="text/html" data="/root_folder_project/Project_Nexus/Solutioncontroller/muser" style="width:100%; height:100%;"></object></div>');
           
     };
 
@@ -607,7 +607,7 @@
     $(document).on('click', '#bt_logout', function(){ 
         
     $.ajax({
-      url:"<?php base_url('')?>Solutioncontroller/logout",
+      url:"Solutioncontroller/logout",
       method:"POST",
       dataType:'text',
       data:'',
@@ -645,7 +645,7 @@
       alertify.success('Loading Chat ');
       alertify.set('notifier','delay', delay);
     
-     $("#container_view").html(' <div ><object type="text/html" data="/Solutioncontroller/chat" style="width:100%; height:100%;"></object></div>');
+     $("#container_view").html(' <div ><object type="text/html" data="/root_folder_project/Project_Nexus/Solutioncontroller/chat" style="width:100%; height:100%;"></object></div>');
     
      
     })
