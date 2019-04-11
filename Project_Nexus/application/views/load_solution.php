@@ -62,9 +62,7 @@
                 console.log(JSON.parse(data));
             console.log("---------DDDD-----------");
                 //load_dashboard(data);
-              },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); 
-            console.error(this.props.url, status, err.toString());
-      }.bind(this)
+              },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error);}.bind(this)
 //$('#user_table').html(data);
               });
             
