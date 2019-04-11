@@ -62,7 +62,7 @@
                 console.log("---------DDDD-----------");
                 
                 console.log("---------DDDD-----------");
-                load_dashboard(data2);
+                load_dashboard(data);
               },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error);}.bind(this)
 //$('#user_table').html(data);
               });
@@ -75,6 +75,7 @@
     function load_dashboard(data){
     
       console.log(data);
+                console.log("---------DDDD-----------");
         $.each ( data, function ( key, val ) {
            
             true_val=val.split('_')[0].replace(/[^a-zA-Z 0-9]+/g,'');
