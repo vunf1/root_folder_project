@@ -407,11 +407,9 @@ html { height: 100%;}
      
      
         <label id="label_topbar" title="User info"> 
-        <?php
-            echo $this->session->userdata('username');?>     <?PHP echo $this->session->userdata('status'); ?>  User  <?php if($this->session->userdata('logged_in')==TRUE)
+        <?php echo $this->session->userdata('username');?><?php echo $this->session->userdata('status'); ?>  User  <?php if($this->session->userdata('logged_in')==TRUE)
             {
- 
-//echo img($image_properties_on);
+              echo img($image_properties_on);
             
             }else{echo img($image_properties_off);}?></label>
         
@@ -423,26 +421,19 @@ html { height: 100%;}
     -->
                 
 <label id="fullscreen"></label>
-         <?php $image_properties_fullscreen = array(
-        'src'   => 'assets/img/fullscreen-icon.png',                
-        'width' => '25',
-        'height'=> '25',
+  <?php $image_properties_fullscreen = array(
+    'src'   => 'assets/img/fullscreen-icon.png',                
+    'width' => '25',
+    'height'=> '25',
     'id'=>'img_full',
-         
-); 
-        
-//echo img($image_properties_fullscreen);
-        ?>
-    
-    </div>
+  ); 
+  echo img($image_properties_fullscreen);
+  ?>
+  </div>
         
 
 
 <script>
-   
-
-   
-    
     $(document).ready(function () {
         
        load_dashboard();
@@ -454,16 +445,12 @@ html { height: 100%;}
         
         if($bt_dis="Normal"){
             
-            /* $("#bt_manageusers").css( "display", "none" );
-             $("# bt_management_solution").css( "display", "none" );
-            */
-           
+            $("#bt_manageusers").css( "display", "none" );
+            $("# bt_management_solution").css( "display", "none" );
+                       
         }
         if($bt_dis="Admin"){
-            
-            
-           
-            $("#bt_logout").css( "display", "block" );
+          $("#bt_logout").css( "display", "block" );
             
         }
         if($bt_dis="Developer"){
@@ -480,88 +467,83 @@ html { height: 100%;}
        
     
     
-  var trigger = $('.hamburger'),
-      overlay = $('.overlay'),
-      fullpage= $('#page-content-wrapper'),
-     isClosed = false;
-     
-
-
-
-
-    trigger.click(function () {
-      hamburger_cross(); 
-      
-    });
-
-    function hamburger_cross() {
-
-      if (isClosed == true) {          
-        //overlay.hide(); // BLOCK Interaction 
-        trigger.removeClass('is-open');
-        trigger.addClass('is-closed');
-        
-        $('#container_view').css('margin-left', '100');
+    var trigger = $('.hamburger'),
+        overlay = $('.overlay'),
+        fullpage= $('#page-content-wrapper'),
         isClosed = false;
-      } else {   
-       // overlay.show();
-        trigger.removeClass('is-closed');
-        trigger.addClass('is-open');
-        $('#container_view').css('margin-left', '-35');
-        isClosed = true;
-      }
-  }
-  
-  $('[data-toggle="offcanvas"]').click(function () {
-        $('#wrapper').toggleClass('toggled');
-  });
-  
-  $.ajax({
-  url: "<?php ?>index.php/Solutioncontroller/userinfo",
-                        dataType:'json',
-       method:"POST",
-  data: {'id':<?php echo $this->session->userdata('username');?>},
-  success: function(data){
       
-    
-      
-    $('#user_area').html(data);
-    $('#user_contact').html(data['email']);
-    $('#user_area_name').html(data['name']);
-      
+
+
+
+
+      trigger.click(function () {
+        hamburger_cross(); 
+      });
+
+      function hamburger_cross() {
+
+        if (isClosed == true) {          
+          //overlay.hide(); // BLOCK Interaction 
+          trigger.removeClass('is-open');
+          trigger.addClass('is-closed');
+          
+          $('#container_view').css('margin-left', '100');
+          isClosed = false;
+        } else {   
+        // overlay.show();
+          trigger.removeClass('is-closed');
+          trigger.addClass('is-open');
+          $('#container_view').css('margin-left', '-35');
+          isClosed = true;
+        }
     }
+    
+    $('[data-toggle="offcanvas"]').click(function () {
+          $('#wrapper').toggleClass('toggled');
     });
     
+    $.ajax({
+      url: "<?php ?>index.php/Solutioncontroller/userinfo",
+      dataType:'json',
+      method:"POST",
+      data: {'id':<?php echo $this->session->userdata('username');?>},
+      success: function(data){
+            
+        $('#user_area').html(data);
+        $('#user_contact').html(data['email']);
+        $('#user_area_name').html(data['name']);
+          
+      }
+    });
+      
   
 
-});
+  });
     
     
      function load_man_solution() {
-         
-     var delay = alertify.get('notifier','delay');
- alertify.set('notifier','delay', 2);
- alertify.success('Loading Management Solutions');
- alertify.set('notifier','delay', delay);
+       
+      var delay = alertify.get('notifier','delay');
+      alertify.set('notifier','delay', 2);
+      alertify.success('Loading Management Solutions');
+      alertify.set('notifier','delay', delay);
   
-     $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/solution_management" style="width:100%; height:100%;"></object></div>');
+      $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/solution_management" style="width:100%; height:100%;"></object></div>');
         // $('#obj_medcd').css('witdh','100%');
-         
-}
+      
+      };
    
         
     function load_dashboard(data){
+      
+      var delay = alertify.get('notifier','delay');
+      alertify.set('notifier','delay', 2);
+      alertify.success('Loading Dashboard');
+      alertify.set('notifier','delay', delay);
+      
+      $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/Load_dashboard_solution" style="width:100%; height:100%;"></object></div>');
     
-     var delay = alertify.get('notifier','delay');
- alertify.set('notifier','delay', 2);
- alertify.success('Loading Dashboard');
- alertify.set('notifier','delay', delay);
-  
-         $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/Load_dashboard_solution" style="width:100%; height:100%;"></object></div>');   
-            
-            
-            
-        };
+    };
        
     
     
@@ -570,41 +552,41 @@ html { height: 100%;}
         
      
      $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/HomeController/Index" style="width:100%; height:100%;"></object></div>');
-     
-     
-         
-}
-      function load_medsky_website() {
+    
+    };
+
+    function load_medsky_website() {
           
      $("#container_view").html(' <div align="center"><input type="text" class="form_control" id="url_br"> <button id="next_web" ></button></div>');
-        document.getElementById("next_web").addEventListener("click", function() {
-         
-    load_web($('#url_br').val());
-}, false);
+     
+     document.getElementById("next_web").addEventListener("click", function() {
+       load_web($('#url_br').val());
+      }, false);
       
          
-}
-      function load_web($url) {
-          
-     var delay = alertify.get('notifier','delay');
- alertify.set('notifier','delay', 2);
- alertify.set('notifier','delay', delay);
- alertify.success('Loading into '+$url);
-     $("#container_view").html('<object type="text/html" data="http://www.'+$url+'/" style="width:100%; height:100%;"></object>');
-    
-          
-      }
+    }
+
+    function load_web($url) {
+      
+      var delay = alertify.get('notifier','delay');
+      alertify.set('notifier','delay', 2);
+      alertify.set('notifier','delay', delay);
+      alertify.success('Loading into '+$url);
+      $("#container_view").html('<object type="text/html" data="http://www.'+$url+'/" style="width:100%; height:100%;"></object>');
+    };
+
+
     function load_users() {
-        
-     var delay = alertify.get('notifier','delay');
- alertify.set('notifier','delay', 2);
- alertify.success('Loading Users Management');
- alertify.set('notifier','delay', delay);
-  
-     $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/muser" style="width:100%; height:100%;"></object></div>');
+      
+      var delay = alertify.get('notifier','delay');
+      alertify.set('notifier','delay', 2);
+      alertify.success('Loading Users Management');
+      alertify.set('notifier','delay', delay);
     
-         
-}
+     $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/muser" style="width:100%; height:100%;"></object></div>');
+          
+    };
+
     $(document).on('click','#dashboard',function(){
         
         //load_home();
@@ -614,6 +596,7 @@ html { height: 100%;}
          
          
     });
+
     $(document).on('click','#medsky',function(){
         
        location.reload();
@@ -624,17 +607,15 @@ html { height: 100%;}
     $(document).on('click', '#bt_logout', function(){ 
         
     $.ajax({
-                    url:"<?php base_url('')?>Solutioncontroller/logout",
-                        method:"POST",
-                        dataType:'text',
-                        data:'',
-                        success:function(data)
-                                                {
-                                                  
-                                                    location.reload();
-                                                 },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); },
+      url:"<?php base_url('')?>Solutioncontroller/logout",
+      method:"POST",
+      dataType:'text',
+      data:'',
+      success:function(data){
+        location.reload();
+      },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); },
         //$('#user_table').html(data);
-                });
+    });
     
     
     });
@@ -646,8 +627,9 @@ html { height: 100%;}
     
     $(document).on('click', '#bt_manageusers', function(){
     
-    load_users();
-     });
+      load_users();
+    
+    });
    
     $(document).on('click', '#bt_management_solution', function(){
         
@@ -657,13 +639,12 @@ html { height: 100%;}
     })
     
     $(document).on('click', '#load_business_chat', function(){
-//OFF 
-        
-         var delay = alertify.get('notifier','delay');
- alertify.set('notifier','delay', 2);
- alertify.success('Loading Chat ');
- alertify.set('notifier','delay', delay);
-  
+      //OFF
+      var delay = alertify.get('notifier','delay');
+      alertify.set('notifier','delay', 2);
+      alertify.success('Loading Chat ');
+      alertify.set('notifier','delay', delay);
+    
      $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/chat" style="width:100%; height:100%;"></object></div>');
     
      
@@ -718,16 +699,17 @@ html { height: 100%;}
             function ss2(){
                 $('#some_info').css('display','none');
             }
-                        
+                 
+            /**
+             * FullScreen Handle - put inside class??
+             */
 function errorHandler() {
    alert('mozfullscreenerror');
 }
 document.documentElement.addEventListener('mozfullscreenerror', errorHandler, false);
-
-                         $('#img_full').click(function () {
-toggleFullScreen();    
-    
-    })
+$('#img_full').click(function () {
+  toggleFullScreen();    
+})
 // toggle full screen
 function toggleFullScreen() {
   if (!document.fullscreenElement &&    // alternative standard method
@@ -756,21 +738,19 @@ document.addEventListener('keydown', function(e) {
     toggleFullScreen();
   }
 }, false);
-            </script>
-           
-            <p onclick="ss()" ondblclick="ss2()">Actual User Info</p>
-                
-                
 
-            <div id="some_info">
+</script>
+
+<p onclick="ss()" ondblclick="ss2()">Actual User Info</p>
+
+<div id="some_info">
     <h5>Username: <?php echo $this->session->userdata('username'); ?><br><p>Email : <span id="user_contact"> </span></p></h5>
     <p id="user_area"><i ></i></p>
     <p >Name: <span id="user_area_name"></span></p>
             </div>
-                    
-                </ul>
             </ul>
-        </nav>
+            </ul>
+            </nav>
    
               
         
@@ -782,7 +762,7 @@ document.addEventListener('keydown', function(e) {
         <!-- Page Content -->
          <div id="page-content-wrapper">
              <button type="button" class="hamburger is-closed" data-toggle="offcanvas" title="Menu">
-                <span class="hamb-top"></span>
+             <span class="hamb-top"></span>
     			<span class="hamb-middle"></span>
 				<span class="hamb-bottom"></span>
             </button>
