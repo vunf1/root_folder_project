@@ -10,7 +10,7 @@ Class Solutioncontroller extends CI_Controller {
         $this->load->view('loadscripts');
         $this->load->model('Tionmodel');
         
-        $this->load->helper(array('form', 'url'.'html'));
+        $this->load->helper(array('form', 'url','html'));
     
         $this->load->library('form_validation');
         $this->load->library('session');
