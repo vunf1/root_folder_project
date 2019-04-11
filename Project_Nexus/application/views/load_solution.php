@@ -57,12 +57,12 @@
               url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/get_solution_name",
               method:"POST",
               cache: false,
-              dataType:'text',
+              dataType:'json',
               success:function(data){
-            console.log("---------DDDD-----------");
+                console.log("---------DDDD-----------");
                 console.log(data);
-                console.log(JSON.parse(data));
-            console.log("---------DDDD-----------");
+                
+                console.log("---------DDDD-----------");
                 //load_dashboard(data);
               },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error);}.bind(this)
 //$('#user_table').html(data);
