@@ -297,10 +297,9 @@ $("#TableCont").css("visibility","visible")};
         $(document).on('click', '#bt_create_serial', function(){ 
         
           $.ajax({
-            url:"/HomeController/create_newserial",
+            url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/HomeController/create_newserial",
             method:"POST",
             dataType:'json',
-            data:'',
             success:function(data){
               if(data==true){
                 location.reload();
@@ -321,55 +320,39 @@ $("#TableCont").css("visibility","visible")};
         
         
         $(document).on('click', '#serial', function(){ 
-        
-    $.ajax({
-                    url:"<?php base_url('')?>indexx",
-                        method:"POST",
-                        dataType:'json',
-                        data:'',
-                        success:function(data)
-                                                {
-                                                    $("#TableCont").html('');
-                                                    tablebuild($.parseJSON(data));
-                                                    
-                                                    
-                                                 },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); },
+          $.ajax({
+            url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/HomeController/indexx",
+            method:"POST",
+            dataType:'json',
+            data:'',
+            success:function(data){
+              $("#TableCont").html('');
+              tablebuild($.parseJSON(data));
+            },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); },
         //$('#user_table').html(data);
-                });
-    
-    
-    }) 
-        
-        
-        
-        
-        
+          });
+        }) 
         
         
         
         $(document).on('click', '#requests', function(){ 
-        
-    $.ajax({
-                    url:"<?php base_url('')?>indexrequests",
-                        method:"POST",
-                        dataType:'json',
-                        data:'',
-                        success:function(data)
-                                                {
-                                                    $("#TableCont").html('');
-                                                    tablebuildreq($.parseJSON(data));
-                                                    
-                                                 },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); },
-        //$('#user_table').html(data);
-                });
-    
-    
-    }) 
+          $.ajax({
+            url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/HomeController/indexrequests",
+            method:"POST",
+            dataType:'json',
+            data:'',
+            success:function(data){
+              $("#TableCont").html('');
+              tablebuildreq($.parseJSON(data));
+            },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); },
+//$('#user_table').html(data);
+            });
+          }) 
         
 function tablebuildreq (mydata) {
 
-var table = $('<table  id:"user_table" align="center" ></table>').addClass( "table hover" )
-        head=("<thead  ><tr ><th>URL</th><th>serial</th><th>HW fingerprint</th><th>Total CDs Burn</th><th>Date</th><th>Type</th></tr></thead>");
+  var table = $('<table  id:"user_table" align="center" ></table>').addClass( "table hover" ),
+      head=("<thead  ><tr ><th>URL</th><th>serial</th><th>HW fingerprint</th><th>Total CDs Burn</th><th>Date</th><th>Type</th></tr></thead>");
 
         $(head).appendTo(table);
     $.each(mydata,function(k, v) {
