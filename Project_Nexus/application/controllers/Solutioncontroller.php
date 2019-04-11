@@ -7,9 +7,9 @@ Class Solutioncontroller extends CI_Controller {
         $this->load->helper('html');
         
         $this->load->model('Tionmodel');
-                $this->load->helper(array('form', 'url'));
+        $this->load->helper(array('form', 'url'));
 
-                $this->load->library('form_validation');
+        $this->load->library('form_validation');
         $this->load->library('session');
         $this->load->database();
         $this->load->dbforge();
@@ -20,12 +20,12 @@ Class Solutioncontroller extends CI_Controller {
     }
 public function userinfo() {
     
-      $this->load->model('Tionmodel');
+    $this->load->model('Tionmodel');
     $id=$this->input->post('id');
    //$this->Tionmodel->userinfo($id);
     
-  $dd=$this->Tionmodel->userinfo($id);
-  return $dd;
+    $dd=$this->Tionmodel->userinfo($id);
+    return $dd;
     
 }
 
@@ -60,23 +60,19 @@ public function chat_send() {
 
 public function index() {
 
-        $this->output->set_header('Access-Control-Allow-Origin: *');
-$this->load->view('loadscripts');
-      $this->load->model('Tionmodel');
-      
-                $this->load->helper(array('form', 'url'));
+    $this->output->set_header('Access-Control-Allow-Origin: *');
+    $this->load->view('loadscripts');
+    $this->load->model('Tionmodel');
+    
+    $this->load->helper(array('form', 'url'));
 
-                $this->load->library('form_validation');
-        $this->load->library('session');
-      
-      if($this->session->userdata('logged_in')==true){
-         
-            
-
-$this->load->view('solution');
-//$this->load->view('footer');
-          
-}else{redirect('LoginController/index');}
+    $this->load->library('form_validation');
+    $this->load->library('session');
+    
+    if($this->session->userdata('logged_in')==true){
+        $this->load->view('solution');
+        //$this->load->view('footer');
+    }else{redirect('LoginController/index');}
 
 /*
 

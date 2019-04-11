@@ -29,11 +29,11 @@ $this->load->view('loadscripts');
       
       if($this->session->userdata('logged_in')==false){
          
-            
-$this->load->view('login');
+                        
+            $this->load->view('login');
 
-$this->load->view('footer');
-          
+            $this->load->view('footer');
+                  
       }else{redirect('Solutioncontroller/index');}
     
 }

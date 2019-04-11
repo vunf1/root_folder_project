@@ -53,7 +53,7 @@
         $( document ).ready(function() {
             
             $.ajax({
-                    url:"<?php base_url('')?>get_solution_name",
+                    url:"<?php ?>get_solution_name",
                         method:"POST",
                         dataType:'json',
                         success:function(data)
@@ -79,46 +79,46 @@
            
             true_val=val.split('_')[0].replace(/[^a-zA-Z 0-9]+/g,'');
           
-    div="<div id='"+true_val+"' class='col-md-3 col-sm-4 col-xs-6' ><a  class='btn btn-mred btn-lg' role='button'><span  ><img id='logo_sol' src='http://10.1.1.102/assets/images/logo_"+true_val+".png'></span> <br/>"+true_val+"<br /></a></div><?php echo read_file(base_url().'log.txt');?>";
-    //class='glyphicon glyphicon-home glyphsize'
-   
+        div="<div id='"+true_val+"' class='col-md-3 col-sm-4 col-xs-6' ><a  class='btn btn-mred btn-lg' role='button'><span  ><img id='logo_sol' src='http://10.1.1.102/assets/images/logo_"+true_val+".png'></span> <br/>"+true_val+"<br /></a></div><?php echo read_file(base_url().'log.txt');?>";
+        //class='glyphicon glyphicon-home glyphsize'
+      
 
-            
-    $(div).appendTo('#dashboard_row');
-     $(document).on('click', '#'+true_val , function(){
-         //$("#footer_").css("display":"none");
-     $j=this.id;
-     form=this;
-        $.ajax({
-                    url:"<?php base_url('')?>load_solution",
-                        method:"POST",
-                        dataType:'text',
-                        data:{'Id':$j},
-                        success:function(data)
-                                                {
-                         
-                         // $("#cont_v").html('');
-                                                    
-                           load_Solution();
-                                                    
-                                                  
-                                                  
-                                                 },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
-                                                         
-                });
+                
+        $(div).appendTo('#dashboard_row');
+        $(document).on('click', '#'+true_val , function(){
+            //$("#footer_").css("display":"none");
+        $j=this.id;
+        form=this;
+            $.ajax({
+                        url:"<?php ?>load_solution",
+                            method:"POST",
+                            dataType:'text',
+                            data:{'Id':$j},
+                            success:function(data)
+                                                    {
+                            
+                            // $("#cont_v").html('');
+                                                        
+                              load_Solution();
+                                                        
+                                                      
+                                                      
+                                                    },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+                                                            
+                    });
+        
+        
      
      
-     
-     
     
-    });
+          });
     
     
     
-    }); 
+          }); 
     
     
-    });
+      });
     }
     
     
@@ -132,7 +132,7 @@
     
     function load_Solution(){
     
-         $("#cont_v").html(' <div ><object type="text/html" data="<?php echo base_url('')?>index.php/HomeController/Index" style="width:100%; height:100%;"></object></div>');   
+         $("#cont_v").html(' <div ><object type="text/html" data="<?php echo ?>index.php/HomeController/Index" style="width:100%; height:100%;"></object></div>');   
             
             
     var delay = alertify.get('notifier','delay');

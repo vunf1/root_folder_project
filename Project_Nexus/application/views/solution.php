@@ -517,7 +517,7 @@ html { height: 100%;}
   });
   
   $.ajax({
-  url: "<?php echo base_url('') ?>index.php/Solutioncontroller/userinfo",
+  url: "<?php ?>index.php/Solutioncontroller/userinfo",
                         dataType:'json',
        method:"POST",
   data: {'id':<?php echo $this->session->userdata('username');?>},
@@ -544,7 +544,7 @@ html { height: 100%;}
  alertify.success('Loading Management Solutions');
  alertify.set('notifier','delay', delay);
   
-     $("#container_view").html(' <div ><object type="text/html" data="<?php echo base_url('')?>index.php/Solutioncontroller/solution_management" style="width:100%; height:100%;"></object></div>');
+     $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/solution_management" style="width:100%; height:100%;"></object></div>');
         // $('#obj_medcd').css('witdh','100%');
          
 }
@@ -557,7 +557,7 @@ html { height: 100%;}
  alertify.success('Loading Dashboard');
  alertify.set('notifier','delay', delay);
   
-         $("#container_view").html(' <div ><object type="text/html" data="<?php echo base_url('')?>index.php/Solutioncontroller/Load_dashboard_solution" style="width:100%; height:100%;"></object></div>');   
+         $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/Load_dashboard_solution" style="width:100%; height:100%;"></object></div>');   
             
             
             
@@ -569,7 +569,7 @@ html { height: 100%;}
     function load_home() {
         
      
-     $("#container_view").html(' <div ><object type="text/html" data="<?php echo base_url('')?>index.php/HomeController/Index" style="width:100%; height:100%;"></object></div>');
+     $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/HomeController/Index" style="width:100%; height:100%;"></object></div>');
      
      
          
@@ -601,7 +601,7 @@ html { height: 100%;}
  alertify.success('Loading Users Management');
  alertify.set('notifier','delay', delay);
   
-     $("#container_view").html(' <div ><object type="text/html" data="<?php echo base_url('')?>index.php/Solutioncontroller/muser" style="width:100%; height:100%;"></object></div>');
+     $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/muser" style="width:100%; height:100%;"></object></div>');
     
          
 }
@@ -664,7 +664,7 @@ html { height: 100%;}
  alertify.success('Loading Chat ');
  alertify.set('notifier','delay', delay);
   
-     $("#container_view").html(' <div ><object type="text/html" data="<?php echo base_url('')?>index.php/Solutioncontroller/chat" style="width:100%; height:100%;"></object></div>');
+     $("#container_view").html(' <div ><object type="text/html" data="<?php?>index.php/Solutioncontroller/chat" style="width:100%; height:100%;"></object></div>');
     
      
     })

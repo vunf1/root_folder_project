@@ -1,6 +1,6 @@
 <head>
      
- <script type="text/javascript" src="<?php echo base_url()?>assets/js/bootstrap-select.js"></script>
+ <script type="text/javascript" src="<?php ?>assets/js/bootstrap-select.js"></script>
  
  
 </head>
@@ -140,8 +140,7 @@ $.ajax({
         
             }
      });
-         }
-                , function(){ 
+         }, function(){ 
  alertify.set('notifier','delay', 1);
      alertify.set('notifier','position', 'top-right'); alertify.error('Cancel')});
              

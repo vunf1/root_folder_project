@@ -383,7 +383,7 @@ Pricing table
            
             true_val=val.split('_')[0].replace(/[^a-zA-Z 0-9]+/g,'');
           
-    rename_tr="<tr><td><img id=so_lo src='<?php echo base_url(); ?>assets/images/logo_"+true_val+".png'></td><td>"+true_val+"</td><td class='text-center'><a class='btn btn-info btn-xs' id='edit_"+true_val+"' data-title='"+true_val+"' data-toggle='modal' data-target='.bd-example-modal-sm' ><span class='glyphicon glyphicon-edit'></span> Edit</a> <a id='del_"+true_val+"' data-title='"+true_val+"' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove' ></span> Del</a></td></tr>"
+    rename_tr="<tr><td><img id=so_lo src='<?php ?>assets/images/logo_"+true_val+".png'></td><td>"+true_val+"</td><td class='text-center'><a class='btn btn-info btn-xs' id='edit_"+true_val+"' data-title='"+true_val+"' data-toggle='modal' data-target='.bd-example-modal-sm' ><span class='glyphicon glyphicon-edit'></span> Edit</a> <a id='del_"+true_val+"' data-title='"+true_val+"' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove' ></span> Del</a></td></tr>"
     
    
     $(rename_tr).appendTo('#solution_table');

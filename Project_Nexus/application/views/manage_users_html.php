@@ -429,7 +429,7 @@ function create_user(id,pass,email,name,status,log){
     $c_log=log;
     
 $.ajax({
-         url: "<?php echo base_url('index.php')?>/Solutioncontroller/muser_create",
+         url: "<?php echo base_url('')?>index.php/Solutioncontroller/muser_create",
          type:'post',
          datatype:'json',
          data:{
@@ -575,7 +575,7 @@ $.ajax({
         
         
     $.ajax({
-                    url:"<?php base_url('index.php/Solutioncontroller')?>save_pw_user",
+                    url:"<?php base_url('')?>index.php/Solutioncontroller/save_pw_user",
                         method:"POST",
                         dataType:'text',
                         data:{id: $id,n_pw:$n_pw},

@@ -148,16 +148,16 @@ body{
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body  >
-<!--background="<?php echo base_url()?>application/img/p.png" -->
+<!--background="<?php ?>application/img/p.png" -->
     
    
     
-    <div id="main" background="<?php echo base_url()?>application/img/p.png" >
+    <div id="main" background="<?php ?>application/img/p.png" >
 
         
         
     <div id="loading" align="center">
-        <img src="<?php echo base_url();?>/assets/img/00.gif">
+        <img src="<?php ?>/assets/img/00.gif">
         
     </div>
 <div id="login">
@@ -166,7 +166,7 @@ body{
     <?php echo form_open('LoginController/login_user'); ?>
         <div class="form-group" align="center">
             
-        <img id="logo-project" src="<?php echo base_url()?>application/img/logo-name-project.png">
+        <img id="logo-project" src="<?php ?>application/img/logo-name-project.png">
             
     <?php echo form_input(array('id' => 'username', 'name' => 'username' ,'placeholder'=>'Username', 'class'=>'form-control')); ?>   
             <?php echo form_input(array('id' => 'password','class'=>'form-control', 'name' => 'password' , 'placeholder'=>'Password' , 'type' =>'password')); ?><br><br>
@@ -181,7 +181,7 @@ body{
 </div></div>
         
 <div id="register">
-   <!-- <img id="logo-project" src="<?php echo base_url()?>application/img/logo-name-project.png">-->
+   <!-- <img id="logo-project" src="<?php ?>application/img/logo-name-project.png">-->
 <div align="center">
     
 <?php echo form_open('LoginController/login_user'); ?>

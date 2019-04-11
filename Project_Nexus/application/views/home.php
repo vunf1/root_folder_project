@@ -71,7 +71,7 @@ td{
             }
         </style>
 <div id="topbar" class="">
-    <IMG id="sol_logo" src="<?php echo base_url() ?>assets/images/logo_<?php echo $this->session->userdata('solution');?>.png" alt="Logotipo">
+    <IMG id="sol_logo" src="<?php ?>assets/images/logo_<?php echo $this->session->userdata('solution');?>.png" alt="Logotipo">
         
     <button class="text-primary btn-primary img-rounded btn-md" id="serial" >Serials</button>
     
@@ -498,7 +498,7 @@ function RowfetchID(im){
    
    $.ajax({
 type: "POST",
-url: "<?php echo base_url('')?>index.php/HomeController/indexid",
+url: "<?php ?>index.php/HomeController/indexid",
             data: {Id: im,Sol:$solu},
 success: function(data) {
    $('#modal-body').html(data);
@@ -584,7 +584,7 @@ var formtxt = $('<div id="form" align="center" >');
  
    $(document).on('click', '#bt_manageusers', function(){
    $.ajax({
-         url: "<?php echo base_url('')?>muser",
+         url: "<?php ?>muser",
          type:'post',
          datatype:'json',
             success: function(data){
