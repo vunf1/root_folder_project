@@ -142,7 +142,7 @@
 <head>
     <title>Login Platform</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body  >
 <!--background="<?php ?>application/img/p.png" -->
@@ -154,7 +154,7 @@
         
         
     <div id="loading" align="center">
-        <img src="<?php  ?>/assets/img/00.gif">
+        <img src="root_folder_project/Project_Nexus/assets/img/00.gif">
         
     </div>
     <div id="login">
