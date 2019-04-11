@@ -59,7 +59,6 @@
               datatype:"json",
               success:function(data){
                 console.log("---------DDDD-----------");
-                console.log($.parseJSON(data));
                 
                 console.log("---------DDDD-----------");
                 load_dashboard(data);
@@ -74,6 +73,7 @@
     
     function load_dashboard(data){
     
+      console.log(data);
         $.each ( data, function ( key, val ) {
            
             true_val=val.split('_')[0].replace(/[^a-zA-Z 0-9]+/g,'');
