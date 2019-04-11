@@ -21,8 +21,8 @@ img{
     
 </style>
 <div id="footer_" class="footer">
-    <img title="Running" src=/assets/img/00.gif"><span class="copyleft">&copy;</span>Copyleft 2017  <strong>João Maia</strong>.OpenSource 
-    <label id="opensource-logo"><img title="Running" src=/assets/img/opensource.png"></label> 
+    <img title="Running" src=/root_folder_project/Project_Nexus/assets/img/00.gif"><span class="copyleft">&copy;</span>Copyleft 2017  <strong>João Maia</strong>.OpenSource 
+    <label id="opensource-logo"><img title="Running" src=/root_folder_project/Project_Nexus/assets/img/opensource.png"></label> 
     
     
     
