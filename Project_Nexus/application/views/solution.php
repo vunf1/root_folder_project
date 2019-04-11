@@ -637,13 +637,13 @@
     })
     
     $(document).on('click', '#load_business_chat', function(){
-      //OFF
+      //OFF - not implemented , pop chat ideia
       var delay = alertify.get('notifier','delay');
       alertify.set('notifier','delay', 2);
       alertify.success('Loading Chat ');
       alertify.set('notifier','delay', delay);
     
-     $("#container_view").html(' <div ><object type="text/html" data="<?php?>/Solutioncontroller/chat" style="width:100%; height:100%;"></object></div>');
+     $("#container_view").html(' <div ><object type="text/html" data="/Solutioncontroller/chat" style="width:100%; height:100%;"></object></div>');
     
      
     })
