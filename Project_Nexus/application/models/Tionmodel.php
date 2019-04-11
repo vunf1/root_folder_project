@@ -645,7 +645,7 @@ public function get_tables_name() {
         array_push($ok,$table);
         
     }*/
-    return str_replace('{}', '',json_encode($tables->result()));
+    return str_replace(str_split('{}'),'',json_encode($tables->result()));
     
  }
  
