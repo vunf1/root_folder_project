@@ -639,11 +639,16 @@ public function get_tables_name() {
     /*
     $ok=$this->db->query('show tables like "%_serials"');
     echo json_encode($ok->result());
-*/$this->db->list_tables();
-$this->db->like('%_serials');
-$query  = $this->db->get();
-return json_encode($query->result_array());
+*/
+$ok=array();
+$tables = $this->db->list_tables();
 
+foreach ($tables as $table)
+{
+    aaray_push($ok,$table);
+    
+}
+echo json_encode($ok);
 
  }
  
