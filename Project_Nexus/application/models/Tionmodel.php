@@ -637,8 +637,7 @@ public function get_tables_name() {
     
     
     $ok=array();
-    $this->db->query('show tables like "%_serials"');
-    $tables=$this->db->get();
+    $tables=$this->db->query('show tables like "%_serials"');
     foreach ($tables as $table)
     {
         array_push($ok,$table);
