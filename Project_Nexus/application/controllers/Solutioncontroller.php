@@ -72,20 +72,20 @@ public function index() {
 
 
       
-public function logout() {
+    public function logout() {
+            
+            $dd=$this->Tionmodel->logout();
+        } 
         
-        $dd=$this->Tionmodel->logout();
-    } 
-    
-    
-    
-       public function muser(){
         
+
+    public function muser(){
+    
         $this->load->view('loadscripts');
         
         $c= json_encode($this->Tionmodel->get_users());
         $data=array('lotsofdata'=>$c);
-         //var_dump($data);
+        //var_dump($data);
         //$this->users->get();
         
     
@@ -116,7 +116,7 @@ public function logout() {
         //$this->load->view('loadscripts');
         
         
-$data["table_name"]=$this->get_tables();
+        $data["table_name"]=$this->get_tables();
         $this->load->view('solution',$data); 
         
         
@@ -144,7 +144,7 @@ $data["table_name"]=$this->get_tables();
          $solution_name=$this->input->post('Id');
         
         
-echo $this->Tionmodel->create_solution($solution_name);
+        echo $this->Tionmodel->create_solution($solution_name);
         
         
     }
@@ -158,7 +158,7 @@ echo $this->Tionmodel->create_solution($solution_name);
          $solution_name=$this->input->post('Id');
          $nsolution_name=$this->input->post('nId');
         
-echo $this->Tionmodel->rename_solution($solution_name,$nsolution_name);
+        echo $this->Tionmodel->rename_solution($solution_name,$nsolution_name);
     
         
         
@@ -172,23 +172,14 @@ echo $this->Tionmodel->rename_solution($solution_name,$nsolution_name);
         
          $solution_name=$this->input->post('Id');
         
-echo $this->Tionmodel->delete_solution($solution_name);
+        echo $this->Tionmodel->delete_solution($solution_name);
       
         
         
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        public function get_solution_name(){
+    public function get_solution_name(){
         
             
             
@@ -196,9 +187,7 @@ echo $this->Tionmodel->delete_solution($solution_name);
         
     }
     
-    
-      
-        public function Load_dashboard_solution(){
+    public function Load_dashboard_solution(){
         
          
         $this->load->view('loadscripts');
@@ -251,12 +240,9 @@ echo $this->Tionmodel->delete_solution($solution_name);
     }
     public function muser_delete(){
         
-               $id=$this->input->post('id');
-               
+        $id=$this->input->post('id');       
         
         $this->Tionmodel->delete_users($id);
-           
-        
     
     }
     public function create_tb(){
@@ -270,7 +256,7 @@ echo $this->Tionmodel->delete_solution($solution_name);
     }
     
     
-       public function muser_status_update(){
+    public function muser_status_update(){
         
                $id=$this->input->post('id');
                $select=$this->input->post('select');
