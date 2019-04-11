@@ -144,7 +144,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
 </head>
-<body  id="bodyElement">
+<body  id="body">
 <!--background="<?php ?>application/img/p.png" -->
     
    
@@ -221,8 +221,8 @@
                         dataType:'text',
                         data:{'username':$('#username').val(),'password':$('#password').val() },
                         success:function(data){
-                            $("#bodyElement").html("");
-                            $("#bodyElement").html(data);
+                            $("#body").html("");
+                            $("#body").html(data);
                             
                         },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
         //$('#user_table').html(data);
