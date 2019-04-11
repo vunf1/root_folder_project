@@ -636,20 +636,16 @@ if($check_serial_rn ||$check_requests_rn == TRUE){
 public function get_tables_name() { 
     
     
-    /*
-    $ok=$this->db->query('show tables like "%_serials"');
-    echo json_encode($ok->result());
-*/
-$ok=array();
-$tables = $this->db->list_tables();
-
-foreach ($tables as $table)
-{
-    array_push($ok,$table);
+    $ok=array();
+    $this->db->query('show tables like "%_serials"');
+    $tables=$this->db->get();
+    foreach ($tables as $table)
+    {
+        array_push($ok,$table);
+        
+    }
+    echo json_encode($ok);
     
-}
-echo json_encode($ok);
-
  }
  
  
