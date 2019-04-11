@@ -183,7 +183,7 @@ public function index() {
             
         $dat=$this->Tionmodel->get_tables_name();
         $da= json_encode($dat);
-        return $dat;
+        print_r($dat);
     }
     
     public function Load_dashboard_solution(){
