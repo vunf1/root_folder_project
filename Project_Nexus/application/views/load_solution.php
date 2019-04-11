@@ -59,7 +59,7 @@
               cache: false,
               dataType:'json',
               success:function(data){
-                console.log(data);
+                console.log(JSON.parse(data));
             console.log("---------DDDD-----------");
                 //load_dashboard(data);
               },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); 
