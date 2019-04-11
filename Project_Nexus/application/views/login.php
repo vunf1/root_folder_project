@@ -210,11 +210,22 @@
         
   
       $(document).on('click','#submit',function(){
-          //$('#login').hide();
-          //$("#loading").css("display", "block");
-          console.log($('#username').val());
+          $('#login').hide();
+          $("#loading").css("display", "block");
+          //console.log($('#username').val());
        
-          console.log($('#password').val());
+          //console.log($('#password').val());
+          $.ajax({
+                    url:"LoginController/login_user",
+                        method:"POST",
+                        dataType:'text',
+                        data:{'username':$('#username').val(),'password':$('#password').val() },
+                        success:function(data){
+                            load_dashboard(data);
+                        
+                        },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+        //$('#user_table').html(data);
+                });
       })
       
       
