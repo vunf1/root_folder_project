@@ -637,7 +637,7 @@ public function get_tables_name() {
     
     
     //$ok=array();
-    $tables=$this->db->query("SHOW tables LIKE '%_serials'");
+    $tables=$this->db->query("SHOW TABLES FROM vunfcove_solutions LIKE '%_serials'");
     //$tables=$this->db->query("SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = 'vunfcove_solutions' AND table_name LIKE '%_serial'");
     
     /*foreach ($tables as $table)
@@ -645,7 +645,7 @@ public function get_tables_name() {
         array_push($ok,$table);
         
     }*/
-    return json_encode($tables->result_array());
+    return $tables->result_array();
     
  }
  

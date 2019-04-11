@@ -56,10 +56,10 @@
             $.ajax({
               url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/get_solution_name",
               method:"POST",
-              
+              dataType:'JSON',
               success:function(data){
                 console.log(data);
-                console.log("---------DDDD-----------");
+            console.log("---------DDDD-----------");
                 //load_dashboard(data);
               },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
 //$('#user_table').html(data);
@@ -93,7 +93,7 @@
               dataType:'text',
               data:{'Id':$j},
               success:function(data){
-                console.log(data);
+                //console.log(data);
                 load_Solution();
               
               },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
