@@ -154,7 +154,7 @@
         
         
     <div id="loading" align="center">
-        <img src="root_folder_project/Project_Nexus/assets/img/00.gif">
+        <img src="assets/img/00.gif">
         
     </div>
     <div id="login">
