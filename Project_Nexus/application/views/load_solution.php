@@ -60,7 +60,7 @@
               
               success:function(data){
                 console.log("---------DDDD-----------");
-                console.log(data);
+                console.log($.parseJSON(data));
                 
                 console.log("---------DDDD-----------");
                 //load_dashboard(data);
