@@ -4,13 +4,17 @@ Class Solutioncontroller extends CI_Controller {
         parent::__construct();
         $this->output->set_header('Access-Control-Allow-Origin: *');
         //$this->output->set_header('X-FRAME-OPTIONS: SAMEORIGIN');
-        $this->load->helper('html');
         
-        $this->load->model('Tionmodel');
-        $this->load->helper(array('form', 'url'));
 
+    
+        $this->load->view('loadscripts');
+        $this->load->model('Tionmodel');
+        
+        $this->load->helper(array('form', 'url'.'html'));
+    
         $this->load->library('form_validation');
         $this->load->library('session');
+
         $this->load->database();
         $this->load->dbforge();
         
@@ -31,16 +35,9 @@ public function userinfo() {
 
 
 public function chat() {
-    
-    
-    
-
-$this->load->view('loadscripts');
-
-$this->load->view('chat_box');
-    
-    
-}
+    $this->load->view('loadscripts');
+    $this->load->view('chat_box');
+    }
 
 
 public function chat_send() {
@@ -60,14 +57,6 @@ public function chat_send() {
 
 public function index() {
 
-    $this->output->set_header('Access-Control-Allow-Origin: *');
-    $this->load->view('loadscripts');
-    $this->load->model('Tionmodel');
-    
-    $this->load->helper(array('form', 'url'));
-
-    $this->load->library('form_validation');
-    $this->load->library('session');
     
     if($this->session->userdata('logged_in')==true){
         $this->load->view('solution');
