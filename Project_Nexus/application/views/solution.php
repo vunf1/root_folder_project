@@ -433,8 +433,10 @@
 
 <script>
     $(document).ready(function () {
-      $(head).attr('title', 'Dashboard');
-       load_dashboard();
+      document.title = 'Dashboard';
+      
+      
+      load_dashboard();
     //load_home();
     //load_users();
     //load_man_solution();
