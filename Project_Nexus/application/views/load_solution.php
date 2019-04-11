@@ -62,7 +62,7 @@
                 console.log("---------DDDD-----------");
                 
                 console.log("---------DDDD-----------");
-                load_dashboard(data);
+                load_dashboard(data2);
               },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error);}.bind(this)
 //$('#user_table').html(data);
               });
