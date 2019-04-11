@@ -181,7 +181,7 @@ public function index() {
     public function get_solution_name(){
         
             
-        var_dump($this->Tionmodel->get_tables_name());
+        //var_dump($this->Tionmodel->get_tables_name());
        return $this->Tionmodel->get_tables_name();
         
     }
