@@ -629,11 +629,11 @@ if($check_serial_rn ||$check_requests_rn == TRUE){
    // $check_requests_cr= $this->create_requests_serial($solution_name);
      
      // serial and requests
-if($check_serial_dt ||$check_requests_dt == TRUE){
-    
-    return true;
-    
-}else{return false;}
+    if($check_serial_dt ||$check_requests_dt == TRUE){
+        
+        return true;
+        
+    }else{return false;}
 
  }
  

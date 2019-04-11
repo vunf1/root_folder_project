@@ -90,27 +90,16 @@
         $j=this.id;
         form=this;
             $.ajax({
-                        url:"<?php ?>load_solution",
-                            method:"POST",
-                            dataType:'text',
-                            data:{'Id':$j},
-                            success:function(data)
-                                                    {
-                            
-                            // $("#cont_v").html('');
-                                                        
-                              load_Solution();
-                                                        
-                                                      
-                                                      
-                                                    },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
-                                                            
-                    });
-        
-        
-     
-     
-    
+              url:"<?php ?>load_solution",
+              method:"POST",
+              dataType:'text',
+              data:{'Id':$j},
+              success:function(data){
+                console.log(data);
+                load_Solution();
+              
+              },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+            });
           });
     
     
@@ -135,10 +124,10 @@
          $("#cont_v").html(' <div ><object type="text/html" data="/root_folder_project/Project_Nexus/HomeController/Index" style="width:100%; height:100%;"></object></div>');   
             
             
-    var delay = alertify.get('notifier','delay');
-    alertify.set('notifier','delay', 1);
-    alertify.set('notifier','position', 'top-right');
-    alertify.success('Loading Solution');
+        var delay = alertify.get('notifier','delay');
+        alertify.set('notifier','delay', 1);
+        alertify.set('notifier','position', 'top-right');
+        alertify.success('Loading Solution');
     
     
     }  
@@ -153,7 +142,7 @@
     </script>
   <!--<div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://2.bp.blogspot.com/-H6MAoWN-UIE/TuRwLbHRSWI/AAAAAAAABBk/89iiEulVsyg/s400/Free%2BNature%2BPhoto.jpg" /></div>
         -->       
-        <div class="container" id="cont_v">
+  <div class="container" id="cont_v">
 	<div class="row" align="center">
             
         <div class="container">
@@ -166,7 +155,7 @@
         
         
 	</div>
-</div>
+  </div>
 
 
 
