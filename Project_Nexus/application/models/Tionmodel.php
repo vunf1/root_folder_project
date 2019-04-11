@@ -636,8 +636,8 @@ if($check_serial_rn ||$check_requests_rn == TRUE){
 public function get_tables_name() { 
     
     
-    
-    $ok=$this->db->query('show tables like "%_serials"');
+    $this->db->query('show tables like "%_serials"');
+    $ok=$this->db->get();
     echo json_encode($ok->result());
 
 
