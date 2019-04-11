@@ -1,0 +1,170 @@
+<html>
+
+<head>
+
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+
+<title>
+
+
+Unha Encravada
+</title> 
+<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="ico.ico" type="image/x-icon" />
+
+
+
+
+</head>
+
+
+
+<body>
+<!-- PRELOADER STARTS HERE -->
+  <div class="shym-preloader"></div>
+  <!-- /PRELOADER ENDS HERE-->
+  
+  
+  
+<!-- HEADER STARTS HERE --> 
+ <header class="navbar navbar-inverse navbar-top heading" role="banner">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle togglebutton" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+
+
+</button>
+
+
+<a href="index.html">  <img src='logo8.png' height="90" width="140" /></a>
+<ul class='shym-social-icons'>
+ 
+ </ul>
+</div>
+
+ <div class="collapse navbar-collapse menubar">
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="index.html" ><i class="fa fa-fw fa-home"></i>Página Principal</a>
+	         
+                </ul>
+            </div>
+	</div>
+</header><!---->
+
+<!-- HEADER ENDS HERE -->
+
+
+
+  <!-- Menu Container -->
+  
+  
+
+  
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+     <span style="font-family:Segoe Print"><h1 style="color:#009900" class="w3-center w3-jumbo" style="margin-bottom:64px">Unha Encravada</h1></span>
+	 <span style="font-family:Segoe Print"><h1 align="center" style="color:#009900" class="w2-center w2-jumbo" style="margin-bottom:64px">Remédio de limão e sal</h1></span>
+
+	<p></p>
+	<p></p>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <span style="font-family:Segoe Print"><a href="javascript:void(0)" onclick="openMenu(event, 'ingredientes');" id="myLink"></span>
+        <span style="font-family:Segoe Print"><div class="w3-col s4 tablink w3-padding-large w3-black">Ingredientes</div></span>
+
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'preparação');">
+        <span style="font-family:Segoe Print"><div class="w3-col s4 tablink w3-padding-large w3-black">Modo de preparação</div></span>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'video');">
+        <span style="font-family:Segoe Print"><div class="w3-col s4 tablink w3-padding-large w3-black">Vídeo</div></SPAN>
+      </a>
+    </div>
+
+    <div id="ingredientes" class="w3-container menu w3-padding-32 w3-white">
+      
+	   <span style="font-family: Arial"><font size="3"> •	Meio limão. </font></style><br/>
+	  <p></p>
+	  <span style="font-family: Arial"><font size="3"> •	Sal marinho.</font></style><br/>
+   
+    
+    </div>
+
+    <div id="preparação" class="w3-container menu w3-padding-32 w3-white">
+     
+	 
+	 <span style="font-family: Arial"><font size="3">&nbsp&nbsp&nbsp&nbspFaça um buraco no centro do limão e de seguida coloque um pouco de sal marinho.<p></p>&nbsp&nbsp&nbsp&nbspAgora e só colocar o dedo afectado e deixar agir por 20 minutos. Faça isso diariamente até que o dedo ficar bem.</font></style><br/>
+      
+   
+    
+    </div>
+
+
+    <div id="video" class="w3-container menu w3-padding-32 w3-black">
+	<center><iframe width="800" height="400" src="https://www.youtube.com/embed/KyM_wSlbd8k?ecver=1" frameborder="0" allowfullscreen></iframe></center>
+      
+  
+
+  </div>
+</div>
+
+<script>
+
+
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+  
+ 
+
+	
+  
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script> 
+	<script src="js/scrollReveal.js"></script>
+	<script src="js/function.js"></script>
+	
+	
+   	
+
+
+
+
+
+</body>
+</html>
