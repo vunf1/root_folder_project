@@ -541,7 +541,7 @@
       alertify.success('Loading Dashboard');
       alertify.set('notifier','delay', delay);
       
-      $("#container_view").html(' <div ><object type="text/html" data="/root_folder_project/Project_Nexus/Solutioncontroller/Load_dashboard_solution" style="width:100%; height:100%;"></object></div>');
+      $("#container_view").html(' <div ><object type="text/html" data="/root_folder_project/Project_Nexus/index.php/Solutioncontroller/Load_dashboard_solution" style="width:100%; height:100%;"></object></div>');
     
     };
        
