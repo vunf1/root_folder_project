@@ -636,9 +636,13 @@ if($check_serial_rn ||$check_requests_rn == TRUE){
 public function get_tables_name() { 
     
     
-    $this->db->query('show tables like "%_serials"');
-    $ok=$this->db->get();
+    /*
+    $ok=$this->db->query('show tables like "%_serials"');
     echo json_encode($ok->result());
+*/$this->db->list_tables();
+$this->db->like('%_serials');
+$query  = $this->db->get();
+return json_encode($query->result_array());
 
 
  }
