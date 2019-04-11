@@ -638,7 +638,7 @@ public function get_tables_name() {
     
     
     $ok=$this->db->query('show tables like "%_serials"');
-    echo json_encode($ok->result_array());
+    echo json_encode($ok->result());
 
 
  }
