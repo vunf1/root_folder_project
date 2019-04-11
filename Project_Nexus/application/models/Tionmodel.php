@@ -637,8 +637,8 @@ public function get_tables_name() {
     
     
     //$ok=array();
-    //$tables=$this->db->query('show tables like "%_serials"');
-    $tables=$this->db->query("SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = 'vunfcove_solutions' AND table_name LIKE '%_serial'");
+    $tables=$this->db->query("SHOW tables LIKE '%_serials'");
+    //$tables=$this->db->query("SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = 'vunfcove_solutions' AND table_name LIKE '%_serial'");
     
     /*foreach ($tables as $table)
     {
