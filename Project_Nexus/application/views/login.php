@@ -220,6 +220,7 @@
           $.ajax({
                     url:"LoginController/login_user",
                         method:"POST",
+                        cache:false,
                         dataType:'text',
                         data:{'username':$('#username').val(),'password':$('#password').val() },
                         success:function(data){
