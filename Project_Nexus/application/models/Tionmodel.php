@@ -636,14 +636,16 @@ if($check_serial_rn ||$check_requests_rn == TRUE){
 public function get_tables_name() { 
     
     
-    $ok=array();
-    $tables=$this->db->query('show tables like "%_serials"');
-    foreach ($tables as $table)
+    //$ok=array();
+    //$tables=$this->db->query('show tables like "%_serials"');
+    $tables=$this->db->query("SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = 'vunfcove_solutions' AND table_name LIKE '%_serial'");
+    
+    /*foreach ($tables as $table)
     {
         array_push($ok,$table);
         
-    }
-    echo json_encode($ok);
+    }*/
+    echo json_encode($tabes->result_array());
     
  }
  

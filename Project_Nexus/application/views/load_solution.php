@@ -62,11 +62,11 @@
                 load_dashboard(data);
               },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
 //$('#user_table').html(data);
-                });
+              });
             
             
             
-});
+    });
     
     
     function load_dashboard(data){
