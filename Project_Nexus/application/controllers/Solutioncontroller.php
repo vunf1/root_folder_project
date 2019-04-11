@@ -182,7 +182,7 @@ public function index() {
         
             
         //var_dump($this->Tionmodel->get_tables_name());
-       return $this->Tionmodel->get_tables_name();
+       echo $this->Tionmodel->get_tables_name();
         
     }
     
