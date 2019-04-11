@@ -72,13 +72,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-
+/**
+ * COV . DOMAIN HOST SERVER
+ * 
+ * UNI CREDE.
+ */
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'solutions',
+	'hostname' => '46.101.88.96',
+	'username' => 'vunfcove',
+	'password' => 'a4386bJMaia.',
+	'database' => 'vunfcove_solutions',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

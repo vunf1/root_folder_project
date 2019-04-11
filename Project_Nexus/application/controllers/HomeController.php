@@ -8,7 +8,8 @@ class Homecontroller extends CI_Controller{
     function __construct() {
         parent::__construct();
         $this->output->set_header('Access-Control-Allow-Origin: *');
-        
+        $this->output->set_header('X-FRAME-OPTIONS: SAMEORIGIN');
+        SS
         $this->load->model('tionmodel');
          $this->load->database();
         //Load them in the constructor

@@ -12,6 +12,7 @@ public function __construct() {
     
     
     
+        //$this->output->set_header('X-Frame-Options "allow-from *"');
         $this->data              = array();
         $this->http_accept       = (strpos($_SERVER['HTTP_ACCEPT'], 'json')) ? 'json' : 'xml';
         $this->method            = strtolower( $_SERVER['REQUEST_METHOD'] );

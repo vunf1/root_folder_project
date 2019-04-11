@@ -5,6 +5,7 @@ Class Websitecontroller extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->output->set_header('Access-Control-Allow-Origin: *');
+        //$this->output->set_header('X-FRAME-OPTIONS: Allow');
 		
 		
 		$this->load->helper(array('form', 'url'));

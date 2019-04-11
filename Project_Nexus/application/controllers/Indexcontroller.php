@@ -4,6 +4,7 @@ class IndexController extends CI_Controller{
     public function index(){
         
         $this->output->set_header('Access-Control-Allow-Origin: *');
+        //$this->output->set_header('X-FRAME-OPTIONS: SAMEORIGIN');
         
         $this->load->view('index');
     } 

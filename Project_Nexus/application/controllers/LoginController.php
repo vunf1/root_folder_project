@@ -4,6 +4,7 @@ Class LoginController extends CI_Controller {
  function __construct() {
         parent::__construct();
         $this->output->set_header('Access-Control-Allow-Origin: *');
+        $this->output->set_header('X-FRAME-OPTIONS: SAMEORIGIN');
         
         
                 $this->load->helper(array('form', 'url'));
@@ -19,6 +20,7 @@ $this->load->view('loadscripts');
 public function index() {
 
         $this->output->set_header('Access-Control-Allow-Origin: *');
+        $this->output->set_header('X-FRAME-OPTIONS: SAMEORIGIN');
 $this->load->view('loadscripts');
       $this->load->model('Tionmodel');
       

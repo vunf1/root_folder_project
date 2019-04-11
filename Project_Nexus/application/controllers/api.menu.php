@@ -15,6 +15,8 @@ $data = $requestObj->getData();
 
 // run through your application methods making use of $data and $request easily where needed
 
+//Only accept POST REQUEST, DENIED ALL
+
 switch( $requestObj->getMethod() )
 {
     case 'get':
