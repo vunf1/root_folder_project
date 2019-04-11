@@ -152,12 +152,12 @@ body{
     
    
     
-    <div id="main" background="<?php ?>application/img/p.png" >
+    <div id="main" background="<?php echo 'root_folder_project' ?>/application/img/p.png" >
 
         
         
     <div id="loading" align="center">
-        <img src="<?php ?>/assets/img/00.gif">
+        <img src="<?php echo 'root_folder_project' ?>/assets/img/00.gif">
         
     </div>
 <div id="login">
