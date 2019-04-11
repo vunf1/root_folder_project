@@ -634,7 +634,7 @@ if($check_serial_rn ||$check_requests_rn == TRUE){
 public function get_tables_name() { 
     
     $sql="SHOW TABLES FROM vunfcove_solutions LIKE '%_serials'";
-    $ok=array[];
+    $ok=array();
     $tables=$this->db->query($sql);
     //$tables=$this->db->query("SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = 'vunfcove_solutions' AND table_name LIKE '%_serial'");
     
