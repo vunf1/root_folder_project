@@ -1,0 +1,17 @@
+{
+	"folders": [],
+	"settings": {
+		"sshfs.configs": [
+			{
+				"host": "vunf1.coventry.domains",
+				"label": "ServerHost",
+				"name": "serverHost",
+				"passphrase": true,
+				"password": true,
+				"privateKeyPath": "c:\\xampp\\htdocs\\root_folder_project\\rsa_pri.ppk",
+				"root": "/home/public_html/a4386bJMaia.",
+				"username": "vunfcove"
+			}
+		]
+	}
+}
