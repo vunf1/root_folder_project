@@ -58,7 +58,7 @@ public function index() {
 
     
     if($this->session->userdata('logged_in')==true){
-        redirect('solution');
+        $this->load->view('solution');
         //$this->load->view('footer');
     }else{redirect('LoginController/index');}
 

@@ -228,8 +228,8 @@
                         cache:false,
                         dataType:'text',
                         success:function(data){
-                            //$("#body").html("");
-                            //$("#body").html(data);
+                            $(document.body).html("");
+                            $(document.body).html(data);
                             
                         },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
         //$('#user_table').html(data);
