@@ -21,7 +21,7 @@ class Homecontroller extends CI_Controller{
         
         
         $newdata = array(
-            'type'  => 'serial'
+            'type'  => 'serial');
             $this->session->set_userdata($newdata);
 
             $this->load->view('loadscripts');

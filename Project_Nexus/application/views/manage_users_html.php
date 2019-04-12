@@ -162,9 +162,9 @@
      echo "<td> 
         <select name='news_status".$key->id."' id='news_status".$key->id."' class='selectpicker show-tick form-control' required>
           <option data-subtext='Actual'selected>".$key->status."</option>
-          <option data-subtext='New User'  value='0' >0</option>
+          <option data-subtext='Normal User'  value='0' >0</option>
           <option data-subtext='Admin User'  value='1' >1</option>
-          <option data-subtext='Normal User' value='2'  >2</option>
+          <option data-subtext='Dev User' value='2'  >2</option>
         </select>
 
 
@@ -196,10 +196,10 @@
         
         
         
-         $(document).on('change','#news_status<?php echo $key->id; ?>',function(){
+         $(document).on('change',"#news_status<?php echo $key->id; ?>",function(){
              
-           $user=<?php echo $key->id; ?>;
-           $select=$('select[name=news_status<?php echo $key->id; ?>]').val();
+           $user="<?php echo $key->id; ?>";
+           $select=$('select[name=news_status'+$user+']').val();
            selected($user,$select);
        })       
              
@@ -213,7 +213,7 @@
         
     
 $.ajax({
-         url: "<?php echo base_url('')?>Solutioncontroller/muser_status_update",
+         url: "https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/muser_status_update",
          type:'post',
          datatype:'json',
          data:{

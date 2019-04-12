@@ -71,7 +71,7 @@ td{
             }
         </style>
 <div id="topbar" class="">
-    <IMG id="sol_logo" src="<?php ?>assets/images/logo_<?php echo $this->session->userdata('solution');?>.png" alt="Logotipo">
+    <IMG id="sol_logo" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/images/logo_<?php echo $this->session->userdata('solution');?>.png" alt="Logotipo">
         
     <button class="text-primary btn-primary img-rounded btn-md" id="serial" >Serials</button>
     
@@ -209,19 +209,6 @@ td{
  
  
  
- /*
-              <th>Id</th>
-     
-                <th>Serial</th>
-         <th>HW fingerprint</th>
-         <th>Expiration Date</th>
-                <th>Period</th>
-                <th>Lictype</th>
-                <th>Status</th>
-                <th>Description</th>
-  */
- 
- 
  ?>
                 
                  
@@ -247,6 +234,7 @@ td{
   <script>
       
            $(document).ready(function(){
+            alertify.dismissAll();
                
                if('<?php echo $this->session->userdata('status') ?>' == 'Normal'){
                    
@@ -264,11 +252,10 @@ td{
   $query = $('#search').val();
   console.log($query);
   
-   if($query != '')
-   {
+   if($query != ''){
        
     $.ajax({
-     url:"<?php base_url('')?>indexsearch",
+     url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/HomeController/indexsearch",
      method:"POST",
      dataType:'json',
      data:{'Id':$query},
@@ -350,22 +337,13 @@ $("#TableCont").css("visibility","visible")};
           }) 
         
 function tablebuildreq (mydata) {
+  alertify.dismissAll();
 
   var table = $('<table  id:"user_table" align="center" ></table>').addClass( "table hover" ),
       head=("<thead  ><tr ><th>URL</th><th>serial</th><th>HW fingerprint</th><th>Total CDs Burn</th><th>Date</th><th>Type</th></tr></thead>");
 
         $(head).appendTo(table);
     $.each(mydata,function(k, v) {
-        
-        
-        //console.log(v['Id']);
-        //onclick=\"showModal('"+v['Id']+"')\"
-        
-      
-      
-        
-        
-          // tablehead +="<th><a id='head'> "+$dataa+ " : </a></th>"
         
         
         TableRow = (" <tbody><tr id='"+v['Id']+"' name='"+v['Id']+"'  data-toggle='modal' data-target='#myModalReq' ><div class='row'>");
@@ -490,7 +468,7 @@ function RowfetchIDReq(im){
     
     $solu='<?php echo $this->session->userdata('solution'); ?>';
 $.ajax({
-            url: '<?php base_url('')?>indexrequestId',
+            url: 'https://vunf1.coventry.domains/root_folder_project/Project_Nexus/HomeController/indexrequestId',
             type:'POST',
             data: {Id: im,Sol:$solu},
             success: function(data){
@@ -553,7 +531,7 @@ var formtxt = $('<div id="form" align="center" >');
  
    $(document).on('click', '#bt_manageusers', function(){
    $.ajax({
-         url: "<?php ?>muser",
+         url: "https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/muser",
          type:'post',
          datatype:'json',
             success: function(data){
@@ -576,6 +554,8 @@ var formtxt = $('<div id="form" align="center" >');
  
  
    $(document).on('click', '#btdelete', function(){
+     
+    alertify.dismissAll();
         var new_Id=$(this).attr('data-title');
     alertify.confirm('Serial ID:'+new_Id+' Delete ?','Remember , delete this serial cant be undone . Are you sure you want continue?', function(){
         
@@ -600,7 +580,6 @@ var formtxt = $('<div id="form" align="center" >');
      
      
      
-     
    });
     
     
@@ -608,7 +587,7 @@ var formtxt = $('<div id="form" align="center" >');
      
 function tablebuild (mydata) {
 
-
+  alertify.dismissAll();
 
 var table = $('<table id:"user_table"  ></table>').addClass( "table hover text-center" );
         head=("<thead align='justify'><tr  class='col'><th>Serial</th><th>HW fingerprint</th><th>Expiration Date</th><th>Period</th><th>Lictype</th><th>Status</th><th>Description</th></tr></thead>")

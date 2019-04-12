@@ -105,6 +105,7 @@
    
    function selected($id,$select,$sol){
              
+    alertify.dismissAll();
     alertify.confirm('Serial Id :<?php $row->Id; ?> Change Status ?','That will change the serial status . Are you sure?', function(){
       $.ajax({
          url: "https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/serial_status_update",
@@ -146,6 +147,8 @@
            
    
     function selected_lic($id,$select,$sol){
+      
+      alertify.dismissAll();
       alertify.confirm('Serial Id :<?php echo $row->Id; ?> Change Lictype ?','That will change the serial license status . Are you sure?', function(){
         
         $.ajax({
@@ -180,6 +183,8 @@
         
                  
     $(document).ready(function () {
+      
+  alertify.dismissAll();
         
     });
         
@@ -201,6 +206,7 @@ $(document).on('click', '#save', function(){
      
      
     
+    alertify.dismissAll();
     $.ajax({
          url: "https://vunf1.coventry.domains/root_folder_project/Project_Nexus/HomeController/indexedit",
          type:'post',
@@ -214,7 +220,8 @@ $(document).on('click', '#save', function(){
         'description':new_description
        },
             success: function(data){
-                              
+               
+              alertify.dismissAll();               
               alertify.set('notifier','position', 'top-right');
               alertify.set('notifier','delay', 1);
               alertify.success('SUCCESSFULLY SAVED');

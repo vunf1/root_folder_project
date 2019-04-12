@@ -57,7 +57,7 @@ public function checklogin($username,$pwd){
                 }
             
         }
-        if($row['status']=="2"){
+        if($row['status']=="0"){
             
                 $data= array(
                     'log'=>'1'
@@ -68,7 +68,7 @@ public function checklogin($username,$pwd){
                                 }
             
                                     }
-            if($row['status']=="0"){
+            if($row['status']=="2"){
                 $data= array(
                 'log'=>'1');
             
@@ -705,7 +705,7 @@ public function del_req($Id,$sol) {
         
             
 
-    $where = "id =".$id;
+    $where = "id ='".$id."'";
 
 
     if($this->db->update('users', $data, $where)){

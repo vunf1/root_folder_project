@@ -52,7 +52,7 @@
         
         $( document ).ready(function() {
           
-            console.log("---------0000-----------");
+          
             $.ajax({
               
               type:"POST",
@@ -73,8 +73,7 @@
     
     function load_dashboard(data){
     
-      console.log(data);
-                console.log("---------DDDD-----------");
+    
 
 
               

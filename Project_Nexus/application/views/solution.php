@@ -405,7 +405,7 @@
      
      
         <label id="label_topbar" title="User info"> 
-        <?php echo $this->session->userdata('username');?><?php echo $this->session->userdata('status'); ?>  User  <?php if($this->session->userdata('logged_in')==TRUE)
+        <?php echo $this->session->userdata('username');?> - <?php echo $this->session->userdata('status'); ?>  User  <?php if($this->session->userdata('logged_in')==TRUE)
             {
               echo img($image_properties_on);
             
@@ -441,7 +441,7 @@
     //load_users();
     //load_man_solution();
     
-        $bt_dis='<?php echo $this->session->userdata('username');?>'
+        $bt_dis='<?php echo $this->session->userdata('status');?>'
         
         if($bt_dis="Normal"){
             
@@ -503,10 +503,10 @@
     });
     
     $.ajax({
-      url: "/root_folder_project/Project_Nexus/Solutioncontroller/userinfo",
+      url: "https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/userinfo",
       dataType:'json',
       method:"POST",
-      data: {'id':<?php echo $this->session->userdata('username');?>},
+      data: {'id':"<?php echo $this->session->userdata('username');?>"},
       success: function(data){
             
         $('#user_area').html(data);
