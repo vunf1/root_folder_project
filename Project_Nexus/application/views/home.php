@@ -384,21 +384,20 @@ function tablebuildreq (mydata) {
 //}); OFF LINE
        $(document).on('click', '#bt_revoke', function(){  
         
-        var remove=$("#search").val();
-        console.log(remove);
-        $.ajax({
-                    url:"<?php base_url('')?>indexrevoke",
-                        method:"POST",
-                        dataType:'json',
-                        data:{'Id':remove},
-                        success:function(data)
-                                                {
-                                                    location.reload();
-                                                 },
-     error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
-        //$('#user_table').html(data);
-                });
-        })  
+          var remove=$("#search").val();
+          console.log(remove);
+          $.ajax({
+            url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/HomeController/indexrevoke",
+            method:"POST",
+            dataType:'json',
+            data:{'Id':remove},
+            success:function(data){
+              location.reload();
+            },
+      error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+          //$('#user_table').html(data);
+          });
+        });  
           
          
            
@@ -443,23 +442,19 @@ function tablebuildreq (mydata) {
    
    
    
-   function reload(){
+function reload(){
    
    $.ajax({
-            url: '<?php base_url('')?>indexx',
-            type:'POST',
-            dataType: 'json',
-            data: {Id: Gid},
-            success: function(data){
-                
-               // console.log(JSON.parse(data).length); //NUMBER OF ROWS 
-           //console.log($.parseJSON(data));
-            $('#TableCont').html("");
-           tablebuild($.parseJSON(data));
-          //console.log(k+" : "+ v);
-          //tablebuild(data);
+     url: 'https://vunf1.coventry.domains/root_folder_project/Project_Nexus/HomeController/indexx',
+     type:'POST',
+     dataType: 'json',
+     data: {Id: Gid},
+     success: function(data){
+       $('#TableCont').html("");
+       tablebuild($.parseJSON(data));
 
-}});
+      },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error);}
+  });
 
 }
 
@@ -475,24 +470,20 @@ function RowfetchID(im){
    
    
    $.ajax({
-type: "POST",
-url: "<?php ?>index.php/HomeController/indexid",
-            data: {Id: im,Sol:$solu},
-success: function(data) {
-   $('#modal-body').html(data);
-   
-
-
- 
-}
-});
+    type: "POST",
+    url: "https://vunf1.coventry.domains/root_folder_project/Project_Nexus/HomeController/indexid",
+    data: {Id: im,Sol:$solu},
+    success: function(data) {
+      $('#modal-body').html(data);
+    },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error);}
+  });
    
    
    
    
    
     
-    };
+};
     
           
 function RowfetchIDReq(im){
@@ -652,63 +643,85 @@ var table = $('<table id:"user_table"  ></table>').addClass( "table hover text-c
      
         
 
-        
-          $(document).on('click', '#save_req', function(){ 
+        /**
+         * NOT DONE
+         */
+    $(document).on('click', '#save_req', function(){ 
           
           //dont work YET
-    $solu='<?php echo $this->session->userdata('solution'); ?>';
-          var new_Id=$("#new_Id").val();
-     var new_url=$("#new_url").val();
-     var new_serial=$("#new_serial").val();
-     var new_hwfingerprint=$("#new_hwfingerprint").val();
-     var new_totalcdsburned=$("#new_totalcdsburned").val();
-     var new_date=$("#new_date").val();
-     var new_type=$("#new_type").val();
-        
-    $.ajax({
-                    url:"<?php base_url('')?>save_requests",
-                        method:"POST",
-                        dataType:'json',
-                        data:{'Id':new_Id,
-                        'url':new_url,
-                        'serial':new_serial,
-                        'hwfingerprint':new_hwfingerprint,
-                        'totalcdsburned':new_totalcdsburned,
-                        'date':new_date,
-                        'type':new_type,
-                        'sol':$solu},
-                        success:function(data)
-                                                {
-                                                    location.reload();
-        }
-                                                    
-                                                 });
-                });
-                  $(document).on('click', '#btdelete_req', function(){ 
-                  var bol=confirm("These items will be permanently deleted and cannot be recovered. Are you sure?");
+      $solu='<?php echo $this->session->userdata('solution'); ?>';
+            var new_Id=$("#new_Id").val();
+      var new_url=$("#new_url").val();
+      var new_serial=$("#new_serial").val();
+      var new_hwfingerprint=$("#new_hwfingerprint").val();
+      var new_totalcdsburned=$("#new_totalcdsburned").val();
+      var new_date=$("#new_date").val();
+      var new_type=$("#new_type").val();
+          
+      $.ajax({
+        url:"<?php base_url('')?>save_requests",
+        method:"POST",
+        dataType:'json',
+        data:{'Id':new_Id,
+        'url':new_url,
+        'serial':new_serial,
+        'hwfingerprint':new_hwfingerprint,
+        'totalcdsburned':new_totalcdsburned,
+        'date':new_date,
+        'type':new_type,
+        'sol':$solu},
+        success:function(data){
+          location.reload();
+        },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+      });  
+
+      $solu='<?php echo $this->session->userdata('solution'); ?>';
+            var new_Id=$("#new_Id").val();
+      var new_url=$("#new_url").val();
+      var new_serial=$("#new_serial").val();
+      var new_hwfingerprint=$("#new_hwfingerprint").val();
+      var new_totalcdsburned=$("#new_totalcdsburned").val();
+      var new_date=$("#new_date").val();
+      var new_type=$("#new_type").val();
+          
+      $.ajax({
+        url:"<?php base_url('')?>save_requests",
+        method:"POST",
+        dataType:'json',
+        data:{'Id':new_Id,
+        'url':new_url,
+        'serial':new_serial,
+        'hwfingerprint':new_hwfingerprint,
+        'totalcdsburned':new_totalcdsburned,
+        'date':new_date,
+        'type':new_type,
+        'sol':$solu},
+        success:function(data){
+          location.reload();
+        },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+      });
+  });
+  
+  
+  /**
+   * Working
+   */
+  $(document).on('click', '#btdelete_req', function(){ 
+    var bol=confirm("These items will be permanently deleted and cannot be recovered. Are you sure?");
    if(bol===true){
-       
-  //dont work yet
-       
-    $solu='<?php echo $this->session->userdata('solution'); ?>';
+     $solu='<?php echo $this->session->userdata('solution'); ?>';
          var Id=$(this).attr('data-title');
     $.ajax({
-                    url:"<?php base_url('')?>del_requests",
-                        method:"POST",
-                        dataType:'json',
-                        data:{'Id':Id,'sol':$solu},
-                        success:function(data)
-                                                {
-                                                    
-                                                    location.reload();
-                                                    
-        }
-                                                    
-                                                 }
-                                                         
-                );
-                 }
-                });
+      url:"<?php base_url('')?>del_requests",
+      method:"POST",
+      dataType:'json',
+      data:{'Id':Id,'sol':$solu},
+      success:function(data){
+        location.reload();
+      },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+    });
+  }
+});
         
         
         

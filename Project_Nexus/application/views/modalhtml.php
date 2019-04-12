@@ -1,9 +1,3 @@
-<head>
-     
- <script type="text/javascript" src="<?php ?>assets/js/bootstrap-select.js"></script>
- 
- 
-</head>
 <style>
     #div-create:hover{
     border:1px solid black;
@@ -11,14 +5,9 @@
 
 </style>
 
-<script>
-    
-    
-    
-    
-</script>
 
-<!--
+<script type="text/javascript" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/js/bootstrap-select.js"></script>
+
   <?php foreach($datas as $row){ 
      ?> 
 
@@ -28,7 +17,7 @@
                     
               <label class="col-md-3 control-label" for="email">Serial</label><br>
               <div class="col-md-9">
-                <input id='new_serial' name="name" value="<?php echo $row->serial; ?>" type="text" placeholder="Serial" class="form-control">
+                <input disabled id='new_serial' name="name" value="<?php echo $row->serial; ?>" type="text" placeholder="Serial" class="form-control">
               </div>
             </div>
     
@@ -114,17 +103,11 @@
        })       
            
    
-         function selected($id,$select,$sol){
+   function selected($id,$select,$sol){
              
-            
-     
     alertify.confirm('Serial Id :<?php $row->Id; ?> Change Status ?','That will change the serial status . Are you sure?', function(){
-        
-        
-        
-    
-$.ajax({
-         url: "<?php echo base_url('')?>index.php/Solutioncontroller/serial_status_update",
+      $.ajax({
+         url: "https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/serial_status_update",
          type:'post',
          datatype:'json',
          data:{
@@ -139,16 +122,16 @@ $.ajax({
             
         
             }
-     });
+      });
          }, function(){ 
- alertify.set('notifier','delay', 1);
-     alertify.set('notifier','position', 'top-right'); alertify.error('Cancel')});
+           alertify.set('notifier','delay', 1);
+           alertify.set('notifier','position', 'top-right'); alertify.error('Cancel')});
              
              
              
              
              
-         }
+    }
          
          
          
@@ -162,39 +145,31 @@ $.ajax({
        })       
            
    
-         function selected_lic($id,$select,$sol){
-             
-            
-     
-    alertify.confirm('Serial Id :<?php echo $row->Id; ?> Change Lictype ?','That will change the serial license status . Are you sure?', function(){
+    function selected_lic($id,$select,$sol){
+      alertify.confirm('Serial Id :<?php echo $row->Id; ?> Change Lictype ?','That will change the serial license status . Are you sure?', function(){
         
-$.ajax({
-         url: "<?php echo base_url('')?>index.php/Solutioncontroller/serial_lictype_update",
-         type:'post',
-         datatype:'json',
-         data:{
-             'id':$id,'select':$select,'sol':$sol},
+        $.ajax({
+          url: "https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/serial_lictype_update",
+          type:'post',
+          datatype:'json',
+          data:{
+            'id':$id,'select':$select,'sol':$sol},
             success: function(data){
-                
-                
-                 var delay = alertify.get('notifier','delay');
-                alertify.set('notifier','position', 'top-right');
-            alertify.set('notifier','delay', 1);
-            alertify.success('LICENSE SUCCESSFULLY CHANGED');        
-            
-        
+              var delay = alertify.get('notifier','delay');
+              alertify.set('notifier','position', 'top-right');
+              alertify.set('notifier','delay', 1);
+              alertify.success('LICENSE SUCCESSFULLY CHANGED');  
             }
-     });
-         }
-                , function(){ 
- alertify.set('notifier','delay', 1);
-     alertify.set('notifier','position', 'top-right'); alertify.error('Cancel')});
-             
-             
-             
-             
-             
-         }
+          });
+        }, function(){ 
+          alertify.set('notifier','delay', 1);
+          alertify.set('notifier','position', 'top-right'); alertify.error('Cancel')});
+            
+            
+            
+            
+            
+        }
          
          </script>
 
@@ -209,28 +184,6 @@ $.ajax({
     });
         
         
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -249,7 +202,7 @@ $(document).on('click', '#save', function(){
      
     
     $.ajax({
-         url: "<?php base_url()?>indexedit",
+         url: "https://vunf1.coventry.domains/root_folder_project/Project_Nexus/HomeController/indexedit",
          type:'post',
          data:{
         'Id':new_Id,
@@ -261,16 +214,16 @@ $(document).on('click', '#save', function(){
         'description':new_description
        },
             success: function(data){
-                
- alertify.set('notifier','position', 'top-right');
- alertify.set('notifier','delay', 1);
- alertify.success('SUCCESSFULLY SAVED');
+                              
+              alertify.set('notifier','position', 'top-right');
+              alertify.set('notifier','delay', 1);
+              alertify.success('SUCCESSFULLY SAVED');
 
                    reload();
                      
                 
             }
      });        
-     });
+});
 
 </script>

@@ -17,30 +17,24 @@ class Homecontroller extends CI_Controller{
         
     }
     public function Index(){
-        $this->load->model('tionmodel');
+        
         
         
         $newdata = array(
-                                    'type'  => 'serial'
-                                                        );
-                            $this->session->set_userdata($newdata);
-        
-        $this->load->view('loadscripts');
-        
-            
-        
-        if($this->session->userdata('logged_in')== true){
-            
-        $this->load->view('home');
-        
-        }else{            redirect('Logincontroller/index');}
+            'type'  => 'serial'
+            $this->session->set_userdata($newdata);
+
+            $this->load->view('loadscripts');
+
+            if($this->session->userdata('logged_in')== true){
+                $this->load->view('home');
+            }else{redirect('Logincontroller/index');}
   
     
     }
+
     public function logout() {
         
-        $this->load->database();
-        $this->load->model('tionmodel');
         $dd=$this->tionmodel->logout();
         echo $dd;
     }
@@ -91,8 +85,8 @@ class Homecontroller extends CI_Controller{
         
     } 
     public function indexId(){
-               $Id=$this->input->post('Id');
-               $ac_solution=$this->input->post('Sol');
+        $Id=$this->input->post('Id');
+        $ac_solution=$this->input->post('Sol');
                
         $this->load->view('loadscripts');
        

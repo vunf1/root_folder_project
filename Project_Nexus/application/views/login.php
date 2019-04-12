@@ -210,28 +210,24 @@
     
     $(document).ready(function () {
         
-  
       $(document).on('click','#submit',function(){
           $('#login').hide();
           $("#loading").css("display", "block");
-          //console.log($('#username').val());
-       
-          //console.log($('#password').val());
+          
           $.ajax({
-                    url:"LoginController/login_user",
-                        method:"POST",
-                        async: true,
-                        data:{
-                            'username':$('#username').val(),
-                            'password':$('#password').val() 
-                        },
-                        cache:false,
-                        dataType:'text',
-                        success:function(data){
-                            $(document.body).html("");
-                            $(document.body).html(data);
-                            
-                        },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
+                    type:"POST",
+                    url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/LoginController/login_user",
+                    data:{
+                        'username':$('#username').val(),
+                        'password':$('#password').val() 
+                    },
+                    dataType:'html',
+                    success:function(data){
+                        
+                        $(document.body).html("");
+                        $(document.body).html(data);
+                        
+                    },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error); }
         //$('#user_table').html(data);
                 });
       })

@@ -14,12 +14,12 @@
 
 
  -->
-<script type='text/javascript' src='https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/js/jquery-ui.js'></script>
   
 <script type="text/javascript" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/js/jquery-1.9.1.min.js"></script>
    
 <script type="text/javascript" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/js/jquery.session.js"></script>
 
+<script type='text/javascript' src='https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/js/jquery-ui.js'></script>
  
  
 <link rel="stylesheet" href="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/alertify/css/alertify.css">
@@ -47,3 +47,10 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
+
+
+
+
+
+
+

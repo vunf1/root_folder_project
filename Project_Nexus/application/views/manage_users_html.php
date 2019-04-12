@@ -7,40 +7,40 @@
     -webkit-box-shadow: 0px 0px 0px 3px #3EA6CE;
     -moz-box-shadow: 0px 0px 0px 3px #3EA6CE;
     box-shadow: 0px 0px 0px 3px #3EA6CE;
-}
+    }
     
-    
-.btn3d {
-    position:relative;
-    border:0;
-     transition: all 40ms linear;
-     margin-top:0px;
-     margin-bottom:0px;
-     margin-left:2px;
-     margin-right:2px;
-}
-.btn3d:active:focus,
-.btn3d:focus:hover,
-.btn3d:focus {
-    -moz-outline-style:none;
-         outline:medium none;
-}
-.btn3d:active, .btn3d.active {
-    top:2px;
+        
+    .btn3d {
+        position:relative;
+        border:0;
+        transition: all 40ms linear;
+        margin-top:0px;
+        margin-bottom:0px;
+        margin-left:2px;
+        margin-right:2px;
+    }
+    .btn3d:active:focus,
+    .btn3d:focus:hover,
+    .btn3d:focus {
+        -moz-outline-style:none;
+            outline:medium none;
+    }
+    .btn3d:active, .btn3d.active {
+        top:2px;
 
-}
+    }
 
-.btn3d.btn-info:active, .btn3d.btn-info.active {
-    box-shadow:0 0 0 1px #00a5c3 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
-    background-color: #39B3D7;
-}
+    .btn3d.btn-info:active, .btn3d.btn-info.active {
+        box-shadow:0 0 0 1px #00a5c3 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+        background-color: #39B3D7;
+    }
 
-.btn3d.btn-danger:active, .btn3d.btn-danger.active {
-    box-shadow:0 0 0 1px #b93802 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
-    background-color: #D73814;
-}
-    
-    
+    .btn3d.btn-danger:active, .btn3d.btn-danger.active {
+        box-shadow:0 0 0 1px #b93802 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+        background-color: #D73814;
+    }
+        
+        
     
     
     .table-bordered{
@@ -77,59 +77,53 @@
     height: 80%; /* Full height */
      /*overflow: auto; Enable scroll if needed */
      
-     
-}
+        
+    }
 
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 10% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-     height: auto; 
-}
-input{
-    border: 0;
-}
-input{
-    text-align: center;
-}
-.modal-header{
- align-content: center;
- 
-}
-#div-create:hover{
-    border:1px solid black;
-}
-body {
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-table {
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        height: auto; 
+    }
+    input{
+        border: 0;
+    }
+    input{
+        text-align: center;
+    }
+    .modal-header{
     align-content: center;
-	font-size: 1em;
-}
+    
+    }
+    #div-create:hover{
+        border:1px solid black;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-.ui-draggable, .ui-droppable {
-	background-position: top;
-}
-th,tr{
-    alignment-adjust:center;
-}
-    </style>
+    table {
+        align-content: center;
+        font-size: 1em;
+    }
+
+    .ui-draggable, .ui-droppable {
+        background-position: top;
+    }
+    th,tr{
+        alignment-adjust:center;
+    }
+</style>
      
-    
-    
-    
-    
-    
-    
+   
 
 <div align="center" id="dtable">
-
-            <table class="table-hover" id="dtable">
-                <thead  ><th colspan="2"> </th><th>Id</th><th>Email</th><th>Name</th><th>Status</th><th>Log</th><th colspan="2">Actions</th></thead>
+    <table class="table-hover" id="dtable">
+        <thead  ><th colspan="2"> </th><th>Id</th><th>Email</th><th>Name</th><th>Status</th><th>Log</th><th colspan="2">Actions</th></thead>
          <tbody>
          <label> <?php echo "Number Accounts : ".$cc=count(json_decode($lotsofdata)); ?> </label>
              

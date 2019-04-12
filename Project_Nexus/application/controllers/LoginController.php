@@ -13,20 +13,12 @@ $this->load->view('loadscripts');
                 $this->load->library('form_validation');
         $this->load->library('session');
         
+      $this->load->model('Tionmodel');
         //Load them in the constructor
         
         
     }
 public function index() {
-
-        $this->output->set_header('Access-Control-Allow-Origin: *');
-        $this->output->set_header('X-FRAME-OPTIONS: SAMEORIGIN');
-$this->load->view('loadscripts');
-      $this->load->model('Tionmodel');
-      
-      
-      
-      
       if($this->session->userdata('logged_in')==false){
          
                         
@@ -40,8 +32,7 @@ $this->load->view('loadscripts');
 
 
 function login_user() {
-    
-      $this->load->model('Tionmodel');
+      
       $username = $this->input->post('username');
       $pass  = $this->input->post('password');
       

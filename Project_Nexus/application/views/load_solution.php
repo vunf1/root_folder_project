@@ -51,20 +51,18 @@
         
         
         $( document ).ready(function() {
-            
-            console.log("---------DDDD-----------");
+          
+            console.log("---------0000-----------");
             $.ajax({
-              url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/get_solution_name",
+              
+              type:"POST",
               async: true,
-              method:"POST",
-              cache:false,
+              url:"https://vunf1.coventry.domains/root_folder_project/Project_Nexus/Solutioncontroller/get_solution_name",
               datatype:"json",
-              success:function(data2){
-                console.log("---------DDDD-----------");
+              success:function(data){
                 
-                console.log("---------DDDD-----------");
-                load_dashboard(data2);
-              },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error);}.bind(this)
+                load_dashboard($.parseJSON(data));
+              },error: function(xhr, status, error) { alert('Search Error: '+ xhr.status+ ' - '+ error);}
 //$('#user_table').html(data);
               });
             
@@ -77,11 +75,14 @@
     
       console.log(data);
                 console.log("---------DDDD-----------");
+
+
+              
         $.each ( data, function ( key, val ) {
            
             true_val=val.split('_')[0].replace(/[^a-zA-Z 0-9]+/g,'');
           
-        div="<div id='"+true_val+"' class='col-md-3 col-sm-4 col-xs-6' ><a  class='btn btn-mred btn-lg' role='button'><span  ><img id='logo_sol' src='http://10.1.1.102/assets/images/logo_"+true_val+".png'></span> <br/>"+true_val+"<br /></a></div><?php echo read_file(base_url().'log.txt');?>";
+        div="<div id='"+true_val+"' class='col-md-3 col-sm-4 col-xs-6' ><a  class='btn btn-mred btn-lg' role='button'><span  ><img id='logo_sol' src='https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/images/logo_"+true_val+".png'></span> <br/>"+true_val+"<br /></a></div>";
         //class='glyphicon glyphicon-home glyphsize'
       
 
@@ -89,9 +90,9 @@
         $(div).appendTo('#dashboard_row');
         $(document).on('click', '#'+true_val , function(){
             //$("#footer_").css("display":"none");
-        $j=this.id;
-        form=this;
-            $.ajax({
+            $j=this.id;
+        
+            $.ajax({//put session to the correct Table[Solution]
               url:"<?php ?>load_solution",
               method:"POST",
               dataType:'text',
