@@ -25,11 +25,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
-  <link rel="shortcut icon" href="https://vunf1.coventry.domains/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://vunf1.coventry.domains/favicon.ico" type="image/x-icon">
 
     <!-- Allertify styles -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/bootstrap.min.css"/>
 
   </head>
 
@@ -39,19 +39,44 @@
         <img id="loading" src="img/loading/Preloader_3.gif" >
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top " id="sideNav">
       
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
 
-        <span class="d-block d-lg-none">Portfolio</span>
+        <!-- less 500with trigger icon on NavBar-->
+        <a target="_blank" class="d-block d-lg-none" href="https://www.linkedin.com/in/joao-maia/">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a target="_blank" class="d-block d-lg-none"  href="https://github.com/vunf1/">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <!-- Title Alternative <span class="d-block d-lg-none">Portfolio</span> -->
 
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" >
         </span>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+
+      <button  class="fa fa-bars navbar-toggler"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> </button>
+      <style>
+        .fa.fa-bars {
+          
+            opacity: 0.8;      
+            color: rgba(22, 51, 22, 0.75);   
+                    
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            outline:none;
+        }
+      </style>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
