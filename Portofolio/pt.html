@@ -534,7 +534,7 @@
           <h2 class="mb-5">Projectos Online</h2>
           <ul class="fa-ul mb-0">
             <li>
-              <h2><a class="btn " href="https://vunf1.coventry.domains/root_folder_project/">Pasta Root de alguns projectos </a></h2>
+              <h1><a class="btn " href="https://vunf1.coventry.domains/root_folder_project/">Pasta Root de alguns projectos </a></h1>
               
             </li>
           </ul>
@@ -546,24 +546,23 @@
         
 
 
-$(".triggerImage").click(function (event) {
+      $(".triggerImage").click(function (event) {
   /*Certificados introdução dinamica das imagens usando um layout mais elegante new:alertify old:modal(bootstrap)*/
         var name=event.target.id;
         var img,img2;
-          if(name === "Certi_before_Uny"){
-            /*Precisa de 2 loads pois certificado tem 2 paginas*/
+        if(name === "Certi_before_Uny"){
+          /*Precisa de 2 loads pois certificado tem 2 paginas*/
 
-            img="<img style='width: 100%;height: auto;' src='img/certificates/"+name+".png'>"; 
-            img2="<img style='width: 100%;height: auto%; bottom:0;' src='img/certificates/"+name+"2.png'>";
-            alertify.alert(img, function(){
-                 alertify.alert(img2, function(){ alertify.success('Vereficado'); })
-                  }).set({'pinnable': true, 'modal':false, 'frameless': true});
-            
-  }
-  img="<img style='width: 100%;height: auto;' src='img/certificates/"+name+".png'>";
+          img="<img style='width: 100%;height: auto;' src='img/certificates/"+name+".png'>"; 
+          img2="<img style='width: 100%;height: auto%; bottom:0;' src='img/certificates/"+name+"2.png'>";
+          alertify.alert(img, function(){
+                alertify.alert(img2, function(){ alertify.success('Verificado'); })
+          }).set({'pinnable': true, 'modal':false, 'frameless': true});
+        }
+        img="<img style='width: 100%;height: auto;' src='img/certificates/"+name+".png'>";
   
-  return alertify.alert(img, function(){ alertify.success('Vereficado'); }).set({'pinnable': true, 'modal':false, 'frameless': true});
-});
+        return alertify.alert(img, function(){ alertify.success('Verificado'); }).set({'pinnable': true, 'modal':false, 'frameless': true});
+      });
 
 $('[data-toggle="tooltip"]').tooltip();/*ativa tooltip cross-platform nos elementos que teem data-toggle="tooltip" + title */
 </script>
