@@ -13,6 +13,7 @@
            window.history.pushState("", "", '/root');
          </script>
         
+        <script src="https://vunf1.coventry.domains/vendor/jquery/jquery.min.js"></script>
     <!-- Allertify styles -->
 <!-- JavaScript -->
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
@@ -31,37 +32,42 @@
 
     <body class="text-center rootyBody">
         <div class="cover-container  w-100 h-100 p-3 mx-auto flex-column">
-          
         
+        <style>
+        .container,#footer_{
+          /*display:none;*/
+        }
+        
+        </style>
+      
         <?php//  Body Content ?>
-          <div class="container " >
+          <div class="container" >
         <?php//  Body Head ?>
         
 
 
-            <br>
             <span class="badge badge-primary">Web-Based SSL Certificated </span>
             <br>
-            <a style="color: chartreuse;" class="btn " id="Project_Nexus" onclick="onRoot(this.id)">Project Nexus <span class="badge badge-light">2017</span></a>
+            <a target="_blank" style="color: darkgrey;" class="btn " id="Project_Nexus" href="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/">Project Nexus <span class="badge badge-light">2017</span></a>
             <br>
             
-            <a style="color: chartreuse;" class="btn " id="Portfolio" href="https://vunf1.coventry.domains/" >Portfolio <span class="badge badge-light">2018</span></a>
+            <a target="_blank" style="color: darkgrey;" class="btn " id="Portfolio" href="https://vunf1.coventry.domains/" >Portfolio <span class="badge badge-light">2018</span></a>
             <br>
             
-            <span id="RWP_releaseVersion.apk" onclick="onRoot(this.id)" class="badge badge-warnning">.APK</span><a style="color: chartreuse;" class="btn " id="real_world_project"  onclick="onRoot(this.id)" >Navigation Campus <span class="badge badge-light">2019</span></a>
+            <a href="https://vunf1.coventry.domains/real_world_project/RWP_releaseVersion.apk"><span id="RWP_releaseVersion.apk"  class="badge badge-warnning">.APK</span></a><a target="_blank" style="color: darkgrey;" class="btn " id="real_world_project" href="https://vunf1.coventry.domains/real_world_project"  >Navigation Campus <span class="badge badge-light">2019</span></a>
             <br>
 
             
             <span class="badge badge-info">vb.NET</span>
             <br>
 
-            <a style="color: chartreuse;" class="btn " id="vbNet_Software_2016.zip" onclick="onRoot(this.id)" >Report <span class="badge badge-light">2016</span></a>
+            <a style="color: darkgrey;" class="btn " id="vbNet_Software_2016.zip" href="https://vunf1.coventry.domains/vbNet_Software_2016.zip"   >Report <span class="badge badge-light">2016</span></a>
             <br>
             
             
             <span class="badge badge-danger">Java</span>
             <br>
-            <a style="color: chartreuse;" class="btn " id="JARcase_Study_Coursework.zip" onclick="onRoot(this.id)" >Gym Management <span class="badge badge-light">2019</span></a>
+            <a style="color: darkgrey;" class="btn " id="JARcase_Study_Coursework.zip" href="https://vunf1.coventry.domains/JARcase_Study_Coursework.zip"   >Gym Management <span class="badge badge-light">2019</span></a>
             <br>
 
           </div>
@@ -69,14 +75,14 @@
         <?php//  Body Footer ?>
           <div id="footer_" class="footer">
             
-            <i style="color: chartreuse;">All available at my <a    href="https://github.com/vunf1" ><span class="badge " >github.com </span></a></i><br>
+            <i style="color: darkgrey;">All available at my <a    href="https://github.com/vunf1" ><span class="badge " >github.com </span></a></i><br>
               <img title="Running" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/img/00.gif"><span class="copyleft">&copy;</span> 2019  <strong>João Maia</strong> OpenSource 
               <label id="opensource-logo"><img title="Running" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/img/opensource.png"></label> 
           </div>
         </div>
         
         <script >
-                function onRoot(folderName){
+                function onRootOFF(folderName){
                   if(folderName=="Project_Nexus" ){
                     alertify.message('Loading...'+folderName+' ');
                     
@@ -103,7 +109,16 @@
                       
                 };
             
-                
+                $(document).ready(function () {
+                  $("#loading2").css("display","none");
+                  $("#footer_").css("display","block");
+
+                  $(".container").css("display","block");
+
+
+
+                      
+                });
                 </script>
         
         </body>
