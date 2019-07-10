@@ -76,12 +76,17 @@
           <div id="footer_" class="footer">
             
             <i style="color: darkgrey;">All available at my <a    href="https://github.com/vunf1" ><span class="badge " >github.com </span></a></i><br>
-              <img title="Running" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/img/00.gif"><span class="copyleft">&copy;</span> 2019  <strong>João Maia</strong> OpenSource 
+              <img title="Running" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/img/00.gif"><span class="copyleft">&copy;</span> <i id="datt"></i>  <strong>João Maia</strong> OpenSource 
               <label id="opensource-logo"><img title="Running" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/img/opensource.png"></label> 
           </div>
         </div>
         
         <script >
+          var d = new Date();
+          //var strDate = d.getFullYear() + "/" + (d.getMonth()+1) + "/" + d.getDate();
+          var strDate = d.getFullYear();
+          $("#datt").html(strDate);
+          
                 function onRootOFF(folderName){
                   if(folderName=="Project_Nexus" ){
                     alertify.message('Loading...'+folderName+' ');
