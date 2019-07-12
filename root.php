@@ -46,7 +46,7 @@
         <?php//  Body Head ?>
         
 
-            <span class="badge badge-primary" onclick="triggerDiv('Web-Based')">Web-Based SSL Certificated </span>
+            <button class="badge badge-primary" onclick="triggerDiv('Web-Based')">Web-Based SSL Certificated </button>
             <br>
             <div id="Web-Based" style="display:none;">
             <a target="_blank" style="color: darkgrey;" class="btn " id="Project_Nexus" href="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/">Project Nexus <span class="badge badge-light">2017</span></a>
@@ -60,7 +60,7 @@
             </div>
 
             
-            <span class="badge badge-info" onclick="triggerDiv('vb.NET')">vb.NET</span>
+            <button class="badge badge-info" onclick="triggerDiv('vb.NET')">vb.NET</button>
             <br>
             <div id="vb.NET" style="display:none;">
 
@@ -69,7 +69,7 @@
             </div>
             
             
-            <span class="badge badge-danger"  onclick="triggerDiv('Java')">Java</span>
+            <button class="badge badge-danger"  onclick="triggerDiv('Java')">Java</button>
             <br>
             
             <div id="Java" style="display:none;">
@@ -79,7 +79,7 @@
           </div>
         
         <?php//  Body Footer ?>
-          <div id="footer_" class="footer">
+          <div id="footer_" class="">
             
             <i style="color: darkgrey;">All available at my <a    href="https://github.com/vunf1" ><span class="badge " >github.com </span></a></i><br>
               <img title="Running" src="https://vunf1.coventry.domains/root_folder_project/Project_Nexus/assets/img/00.gif"><span class="copyleft">&copy;</span> <i id="datt"></i>  <strong>João Maia</strong> OpenSource 

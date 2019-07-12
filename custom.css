@@ -4842,12 +4842,10 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     border-bottom-right-radius: .2rem
 }
 
-.badge {
+.badge {/*EDITED*/
     display: inline-block;
-    padding: .25em .4em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
+    padding: .30em .8em;
+    font-size: 100%;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
